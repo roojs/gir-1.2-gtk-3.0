@@ -1,0 +1,941 @@
+<?xml version="1.0"?>
+<repository version="1.2" xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0">
+<include name="Gio" version="2.0"/>
+<include name="GObject" version="2.0"/>
+<include name="Dee" version="0.5"/>
+<include name="Dbusmenu" version="0.4"/>
+<include name="GLib" version="2.0"/>
+<package name="unity"/>
+<c:include name="unity.h"/>
+<namespace name="Unity" version="3.0" c:prefix="Unity" shared-library="libunity.so.4">
+	<function name="io_read_stream_async" c:identifier="unity_io_read_stream_async">
+		<parameters>
+			<parameter name="input" transfer-ownership="none">
+				<type name="Gio.InputStream" c:type="GInputStream*"/>
+			</parameter>
+			<parameter name="io_priority" transfer-ownership="none">
+				<type name="gint" c:type="gint"/>
+			</parameter>
+			<parameter name="cancellable" transfer-ownership="none" allow-none="1">
+				<type name="Gio.Cancellable" c:type="GCancellable*"/>
+			</parameter>
+			<parameter name="_callback_" transfer-ownership="none" allow-none="1" closure="4" scope="async">
+				<type name="Gio.AsyncReadyCallback" c:type="GAsyncReadyCallback"/>
+			</parameter>
+			<parameter name="_callback__target" transfer-ownership="none" allow-none="1">
+				<type name="gpointer" c:type="void*"/>
+			</parameter>
+		</parameters>
+		<return-value transfer-ownership="none">
+			<type name="none"/>
+		</return-value>
+	</function>
+	<function name="io_read_stream_finish" c:identifier="unity_io_read_stream_finish" throws="1">
+		<parameters>
+			<parameter name="_res_" transfer-ownership="none">
+				<type name="Gio.AsyncResult" c:type="GAsyncResult*"/>
+			</parameter>
+			<parameter name="data" direction="out" transfer-ownership="full">
+				<array length="2">
+					<type name="guint8" c:type="guint8"/>
+				</array>
+			</parameter>
+			<parameter name="data_length1" direction="out" transfer-ownership="none">
+				<type name="gint" c:type="gint"/>
+			</parameter>
+			<parameter name="size" direction="out" transfer-ownership="full">
+				<type name="gulong" c:type="gsize"/>
+			</parameter>
+		</parameters>
+		<return-value transfer-ownership="none">
+			<type name="none"/>
+		</return-value>
+	</function>
+	<function name="io_open_from_dirs" c:identifier="unity_io_open_from_dirs">
+		<parameters>
+			<parameter name="filename" transfer-ownership="none">
+				<type name="utf8" c:type="const gchar*"/>
+			</parameter>
+			<parameter name="dirs" transfer-ownership="none">
+				<array length="2">
+					<type name="utf8" c:type="gchar*"/>
+				</array>
+			</parameter>
+			<parameter name="dirs_length1" transfer-ownership="none">
+				<type name="gint" c:type="gint"/>
+			</parameter>
+			<parameter name="_callback_" transfer-ownership="none" allow-none="1" closure="4" scope="async">
+				<type name="Gio.AsyncReadyCallback" c:type="GAsyncReadyCallback"/>
+			</parameter>
+			<parameter name="_callback__target" transfer-ownership="none" allow-none="1">
+				<type name="gpointer" c:type="void*"/>
+			</parameter>
+		</parameters>
+		<return-value transfer-ownership="none">
+			<type name="none"/>
+		</return-value>
+	</function>
+	<function name="io_open_from_dirs_finish" c:identifier="unity_io_open_from_dirs_finish" throws="1">
+		<parameters>
+			<parameter name="_res_" transfer-ownership="none">
+				<type name="Gio.AsyncResult" c:type="GAsyncResult*"/>
+			</parameter>
+		</parameters>
+		<return-value transfer-ownership="full" allow-none="1">
+			<type name="Gio.FileInputStream" c:type="GFileInputStream*"/>
+		</return-value>
+	</function>
+	<function name="io_open_from_data_dirs" c:identifier="unity_io_open_from_data_dirs">
+		<parameters>
+			<parameter name="filename" transfer-ownership="none">
+				<type name="utf8" c:type="const gchar*"/>
+			</parameter>
+			<parameter name="_callback_" transfer-ownership="none" allow-none="1" closure="2" scope="async">
+				<type name="Gio.AsyncReadyCallback" c:type="GAsyncReadyCallback"/>
+			</parameter>
+			<parameter name="_callback__target" transfer-ownership="none" allow-none="1">
+				<type name="gpointer" c:type="void*"/>
+			</parameter>
+		</parameters>
+		<return-value transfer-ownership="none">
+			<type name="none"/>
+		</return-value>
+	</function>
+	<function name="io_open_from_data_dirs_finish" c:identifier="unity_io_open_from_data_dirs_finish" throws="1">
+		<parameters>
+			<parameter name="_res_" transfer-ownership="none">
+				<type name="Gio.AsyncResult" c:type="GAsyncResult*"/>
+			</parameter>
+		</parameters>
+		<return-value transfer-ownership="full" allow-none="1">
+			<type name="Gio.FileInputStream" c:type="GFileInputStream*"/>
+		</return-value>
+	</function>
+	<function name="io_get_system_data_dirs" c:identifier="unity_io_get_system_data_dirs">
+		<parameters>
+			<parameter name="result_length1" direction="out" transfer-ownership="none">
+				<type name="gint" c:type="gint"/>
+			</parameter>
+		</parameters>
+		<return-value transfer-ownership="full">
+			<array length="0">
+				<type name="utf8" c:type="gchar*"/>
+			</array>
+		</return-value>
+	</function>
+	<enumeration name="ActivationStatus" c:type="UnityActivationStatus" glib:type-name="UnityActivationStatus" glib:get-type="unity_activation_status_get_type">
+		<member name="not_activated" c:identifier="UNITY_ACTIVATION_STATUS_NOT_ACTIVATED" value="0"/>
+		<member name="activated_show_dash" c:identifier="UNITY_ACTIVATION_STATUS_ACTIVATED_SHOW_DASH" value="1"/>
+		<member name="activated_hide_dash" c:identifier="UNITY_ACTIVATION_STATUS_ACTIVATED_HIDE_DASH" value="2"/>
+	</enumeration>
+	<class name="AppInfoManager" c:type="UnityAppInfoManager" glib:type-name="UnityAppInfoManager" glib:get-type="unity_app_info_manager_get_type" glib:type-struct="AppInfoManagerClass" parent="GObject.Object">
+		<field name="parent_instance">
+			<type name="GObject.Object" c:type="GObject"/>
+		</field>
+		<field name="priv">
+			<type name="AppInfoManagerPrivate" c:type="UnityAppInfoManagerPrivate*"/>
+		</field>
+		<function name="get_instance" c:identifier="unity_app_info_manager_get_instance">
+			<return-value transfer-ownership="full">
+				<type name="Unity.AppInfoManager" c:type="UnityAppInfoManager*"/>
+			</return-value>
+		</function>
+		<method name="lookup" c:identifier="unity_app_info_manager_lookup">
+			<parameters>
+				<parameter name="id" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="full" allow-none="1">
+				<type name="Gio.AppInfo" c:type="GAppInfo*"/>
+			</return-value>
+		</method>
+		<method name="get_categories" c:identifier="unity_app_info_manager_get_categories">
+			<parameters>
+				<parameter name="id" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+				<parameter name="result_length1" direction="out" transfer-ownership="none">
+					<type name="gint" c:type="gint"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="none" allow-none="1">
+				<array length="1">
+					<type name="utf8" c:type="gchar*"/>
+				</array>
+			</return-value>
+		</method>
+		<method name="lookup_async" c:identifier="unity_app_info_manager_lookup_async">
+			<parameters>
+				<parameter name="id" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+				<parameter name="_callback_" transfer-ownership="none" allow-none="1" closure="2" scope="async">
+					<type name="Gio.AsyncReadyCallback" c:type="GAsyncReadyCallback"/>
+				</parameter>
+				<parameter name="_callback__target" transfer-ownership="none" allow-none="1">
+					<type name="gpointer" c:type="void*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<method name="lookup_finish" c:identifier="unity_app_info_manager_lookup_finish" throws="1">
+			<parameters>
+				<parameter name="_res_" transfer-ownership="none">
+					<type name="Gio.AsyncResult" c:type="GAsyncResult*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="full" allow-none="1">
+				<type name="Gio.AppInfo" c:type="GAppInfo*"/>
+			</return-value>
+		</method>
+		<method name="clear" c:identifier="unity_app_info_manager_clear">
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<glib:signal name="changed">
+			<parameters>
+				<parameter name="id" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+				<parameter name="new_appinfo" transfer-ownership="none" allow-none="1">
+					<type name="Gio.AppInfo" c:type="GAppInfo*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</glib:signal>
+	</class>
+	<record name="AppInfoManagerClass" c:type="UnityAppInfoManagerClass" glib:is-gtype-struct-for="AppInfoManager">
+		<field name="parent_class">
+			<type name="GObject.ObjectClass" c:type="GObjectClass"/>
+		</field>
+	</record>
+	<record name="AppInfoManagerPrivate" c:type="UnityAppInfoManagerPrivate" disguised="1"/>
+	<class name="Inspector" c:type="UnityInspector" glib:type-name="UnityInspector" glib:get-type="unity_inspector_get_type" glib:type-struct="InspectorClass" parent="GObject.Object">
+		<field name="parent_instance">
+			<type name="GObject.Object" c:type="GObject"/>
+		</field>
+		<field name="priv">
+			<type name="InspectorPrivate" c:type="UnityInspectorPrivate*"/>
+		</field>
+		<function name="get_default" c:identifier="unity_inspector_get_default">
+			<return-value transfer-ownership="none">
+				<type name="Unity.Inspector" c:type="UnityInspector*"/>
+			</return-value>
+		</function>
+		<property name="unity-running">
+			<type name="gboolean" c:type="gboolean"/>
+		</property>
+		<property name="unity-bus-name">
+			<type name="utf8" c:type="gchar*"/>
+		</property>
+	</class>
+	<record name="InspectorClass" c:type="UnityInspectorClass" glib:is-gtype-struct-for="Inspector">
+		<field name="parent_class">
+			<type name="GObject.ObjectClass" c:type="GObjectClass"/>
+		</field>
+	</record>
+	<record name="InspectorPrivate" c:type="UnityInspectorPrivate" disguised="1"/>
+	<class name="LauncherEntry" c:type="UnityLauncherEntry" glib:type-name="UnityLauncherEntry" glib:get-type="unity_launcher_entry_get_type" glib:type-struct="LauncherEntryClass" parent="GObject.Object">
+		<implements name="Dee.Serializable"/>
+		<field name="parent_instance">
+			<type name="GObject.Object" c:type="GObject"/>
+		</field>
+		<field name="priv">
+			<type name="LauncherEntryPrivate" c:type="UnityLauncherEntryPrivate*"/>
+		</field>
+		<function name="get_for_app_uri" c:identifier="unity_launcher_entry_get_for_app_uri">
+			<parameters>
+				<parameter name="app_uri" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="full">
+				<type name="Unity.LauncherEntry" c:type="UnityLauncherEntry*"/>
+			</return-value>
+		</function>
+		<function name="get_for_desktop_id" c:identifier="unity_launcher_entry_get_for_desktop_id">
+			<parameters>
+				<parameter name="desktop_id" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="full">
+				<type name="Unity.LauncherEntry" c:type="UnityLauncherEntry*"/>
+			</return-value>
+		</function>
+		<function name="get_for_desktop_file" c:identifier="unity_launcher_entry_get_for_desktop_file">
+			<parameters>
+				<parameter name="desktop_file" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="full">
+				<type name="Unity.LauncherEntry" c:type="UnityLauncherEntry*"/>
+			</return-value>
+		</function>
+		<property name="app-uri" writable="1" construct="1">
+			<type name="utf8" c:type="gchar*"/>
+		</property>
+		<property name="count" writable="1">
+			<type name="gint64" c:type="gint64"/>
+		</property>
+		<property name="count-visible" writable="1">
+			<type name="gboolean" c:type="gboolean"/>
+		</property>
+		<property name="progress" writable="1">
+			<type name="gdouble" c:type="gdouble"/>
+		</property>
+		<property name="progress-visible" writable="1">
+			<type name="gboolean" c:type="gboolean"/>
+		</property>
+		<property name="urgent" writable="1">
+			<type name="gboolean" c:type="gboolean"/>
+		</property>
+		<property name="quicklist" writable="1">
+			<type name="Dbusmenu.Menuitem" c:type="DbusmenuMenuitem*"/>
+		</property>
+	</class>
+	<record name="LauncherEntryClass" c:type="UnityLauncherEntryClass" glib:is-gtype-struct-for="LauncherEntry">
+		<field name="parent_class">
+			<type name="GObject.ObjectClass" c:type="GObjectClass"/>
+		</field>
+	</record>
+	<record name="LauncherEntryPrivate" c:type="UnityLauncherEntryPrivate" disguised="1"/>
+	<class name="PlaceRendererInfo" c:type="UnityPlaceRendererInfo" glib:type-name="UnityPlaceRendererInfo" glib:get-type="unity_place_renderer_info_get_type" glib:type-struct="PlaceRendererInfoClass" parent="GObject.Object">
+		<field name="parent_instance">
+			<type name="GObject.Object" c:type="GObject"/>
+		</field>
+		<field name="priv">
+			<type name="PlaceRendererInfoPrivate" c:type="UnityPlaceRendererInfoPrivate*"/>
+		</field>
+		<method name="set_hint" c:identifier="unity_place_renderer_info_set_hint">
+			<parameters>
+				<parameter name="hint" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+				<parameter name="val" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<method name="get_hint" c:identifier="unity_place_renderer_info_get_hint">
+			<parameters>
+				<parameter name="hint" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="full" allow-none="1">
+				<type name="utf8" c:type="gchar*"/>
+			</return-value>
+		</method>
+		<method name="clear_hint" c:identifier="unity_place_renderer_info_clear_hint">
+			<parameters>
+				<parameter name="hint" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<method name="clear_hints" c:identifier="unity_place_renderer_info_clear_hints">
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<method name="num_hints" c:identifier="unity_place_renderer_info_num_hints">
+			<return-value transfer-ownership="full">
+				<type name="guint" c:type="guint"/>
+			</return-value>
+		</method>
+		<property name="default-renderer" writable="1">
+			<type name="utf8" c:type="gchar*"/>
+		</property>
+		<property name="groups-model" writable="1">
+			<type name="Dee.Model" c:type="DeeModel*"/>
+		</property>
+		<property name="results-model" writable="1">
+			<type name="Dee.Model" c:type="DeeModel*"/>
+		</property>
+	</class>
+	<record name="PlaceRendererInfoClass" c:type="UnityPlaceRendererInfoClass" glib:is-gtype-struct-for="PlaceRendererInfo">
+		<field name="parent_class">
+			<type name="GObject.ObjectClass" c:type="GObjectClass"/>
+		</field>
+	</record>
+	<record name="PlaceRendererInfoPrivate" c:type="UnityPlaceRendererInfoPrivate" disguised="1"/>
+	<class name="PlaceSearch" c:type="UnityPlaceSearch" glib:type-name="UnityPlaceSearch" glib:get-type="unity_place_search_get_type" glib:type-struct="PlaceSearchClass" parent="GObject.InitiallyUnowned">
+		<field name="parent_instance">
+			<type name="GObject.InitiallyUnowned" c:type="GInitiallyUnowned"/>
+		</field>
+		<field name="priv">
+			<type name="PlaceSearchPrivate" c:type="UnityPlaceSearchPrivate*"/>
+		</field>
+		<constructor name="new" c:identifier="unity_place_search_new">
+			<parameters>
+				<parameter name="search" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+				<parameter name="hints" transfer-ownership="none">
+					<type name="GLib.HashTable" c:type="GHashTable*">
+						<type name="utf8" c:type="gchar*"/>
+						<type name="utf8" c:type="gchar*"/>
+					</type>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="full">
+				<type name="Unity.PlaceSearch" c:type="UnityPlaceSearch*"/>
+			</return-value>
+		</constructor>
+		<method name="get_search_string" c:identifier="unity_place_search_get_search_string">
+			<return-value transfer-ownership="full">
+				<type name="utf8" c:type="gchar*"/>
+			</return-value>
+		</method>
+		<method name="get_hints" c:identifier="unity_place_search_get_hints">
+			<return-value transfer-ownership="full">
+				<type name="GLib.List" c:type="GList*">
+					<type name="utf8" c:type="const gchar*"/>
+				</type>
+			</return-value>
+		</method>
+		<method name="set_hint" c:identifier="unity_place_search_set_hint">
+			<parameters>
+				<parameter name="hint" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+				<parameter name="val" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<method name="get_hint" c:identifier="unity_place_search_get_hint">
+			<parameters>
+				<parameter name="hint" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="full" allow-none="1">
+				<type name="utf8" c:type="gchar*"/>
+			</return-value>
+		</method>
+		<method name="clear_hint" c:identifier="unity_place_search_clear_hint">
+			<parameters>
+				<parameter name="hint" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<method name="clear_hints" c:identifier="unity_place_search_clear_hints">
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<method name="num_hints" c:identifier="unity_place_search_num_hints">
+			<return-value transfer-ownership="full">
+				<type name="guint" c:type="guint"/>
+			</return-value>
+		</method>
+		<method name="equals" c:identifier="unity_place_search_equals">
+			<parameters>
+				<parameter name="other" transfer-ownership="none" allow-none="1">
+					<type name="Unity.PlaceSearch" c:type="UnityPlaceSearch*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="full">
+				<type name="gboolean" c:type="gboolean"/>
+			</return-value>
+		</method>
+		<method name="set_section" c:identifier="unity_place_search_set_section">
+			<parameters>
+				<parameter name="section" transfer-ownership="none">
+					<type name="guint" c:type="guint"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<method name="get_section" c:identifier="unity_place_search_get_section">
+			<return-value transfer-ownership="full">
+				<type name="guint" c:type="guint"/>
+			</return-value>
+		</method>
+		<method name="set_parent_entry" c:identifier="unity_place_search_set_parent_entry">
+			<parameters>
+				<parameter name="entry" transfer-ownership="none">
+					<type name="Unity.PlaceEntryInfo" c:type="UnityPlaceEntryInfo*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<method name="get_parent_entry" c:identifier="unity_place_search_get_parent_entry">
+			<return-value transfer-ownership="none" allow-none="1">
+				<type name="Unity.PlaceEntryInfo" c:type="UnityPlaceEntryInfo*"/>
+			</return-value>
+		</method>
+		<method name="finished" c:identifier="unity_place_search_finished">
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+	</class>
+	<record name="PlaceSearchClass" c:type="UnityPlaceSearchClass" glib:is-gtype-struct-for="PlaceSearch">
+		<field name="parent_class">
+			<type name="GObject.InitiallyUnownedClass" c:type="GInitiallyUnownedClass"/>
+		</field>
+	</record>
+	<record name="PlaceSearchPrivate" c:type="UnityPlaceSearchPrivate" disguised="1"/>
+	<class name="PlaceEntryInfo" c:type="UnityPlaceEntryInfo" glib:type-name="UnityPlaceEntryInfo" glib:get-type="unity_place_entry_info_get_type" glib:type-struct="PlaceEntryInfoClass" parent="GObject.Object">
+		<field name="parent_instance">
+			<type name="GObject.Object" c:type="GObject"/>
+		</field>
+		<field name="priv">
+			<type name="PlaceEntryInfoPrivate" c:type="UnityPlaceEntryInfoPrivate*"/>
+		</field>
+		<constructor name="new" c:identifier="unity_place_entry_info_new">
+			<parameters>
+				<parameter name="dbus_path" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="full">
+				<type name="Unity.PlaceEntryInfo" c:type="UnityPlaceEntryInfo*"/>
+			</return-value>
+		</constructor>
+		<method name="set_hint" c:identifier="unity_place_entry_info_set_hint">
+			<parameters>
+				<parameter name="hint" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+				<parameter name="val" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<method name="get_hint" c:identifier="unity_place_entry_info_get_hint">
+			<parameters>
+				<parameter name="hint" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="full" allow-none="1">
+				<type name="utf8" c:type="gchar*"/>
+			</return-value>
+		</method>
+		<method name="clear_hint" c:identifier="unity_place_entry_info_clear_hint">
+			<parameters>
+				<parameter name="hint" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<method name="clear_hints" c:identifier="unity_place_entry_info_clear_hints">
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<method name="num_hints" c:identifier="unity_place_entry_info_num_hints">
+			<return-value transfer-ownership="full">
+				<type name="guint" c:type="guint"/>
+			</return-value>
+		</method>
+		<method name="flush_all_models" c:identifier="unity_place_entry_info_flush_all_models">
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<property name="entry-renderer-info">
+			<type name="Unity.PlaceRendererInfo" c:type="UnityPlaceRendererInfo*"/>
+		</property>
+		<property name="global-renderer-info">
+			<type name="Unity.PlaceRendererInfo" c:type="UnityPlaceRendererInfo*"/>
+		</property>
+		<property name="dbus-path" writable="1" construct="1">
+			<type name="utf8" c:type="gchar*"/>
+		</property>
+		<property name="display-name" writable="1" construct="1">
+			<type name="utf8" c:type="gchar*"/>
+		</property>
+		<property name="icon" writable="1" construct="1">
+			<type name="utf8" c:type="gchar*"/>
+		</property>
+		<property name="position" writable="1" construct="1">
+			<type name="guint" c:type="guint"/>
+		</property>
+		<property name="mimetypes" writable="1" construct="1">
+			<array>
+				<type name="utf8" c:type="gchar*"/>
+			</array>
+		</property>
+		<property name="sensitive" writable="1" construct="1">
+			<type name="gboolean" c:type="gboolean"/>
+		</property>
+		<property name="sections-model" writable="1" construct="1">
+			<type name="Dee.Model" c:type="DeeModel*"/>
+		</property>
+		<property name="active" writable="1">
+			<type name="gboolean" c:type="gboolean"/>
+		</property>
+		<property name="active-section" writable="1">
+			<type name="guint" c:type="guint"/>
+		</property>
+		<property name="active-search" writable="1">
+			<type name="Unity.PlaceSearch" c:type="UnityPlaceSearch*"/>
+		</property>
+		<property name="active-global-search" writable="1">
+			<type name="Unity.PlaceSearch" c:type="UnityPlaceSearch*"/>
+		</property>
+		<property name="browser" writable="1">
+			<type name="Unity.Browser" c:type="UnityBrowser*"/>
+		</property>
+	</class>
+	<record name="PlaceEntryInfoClass" c:type="UnityPlaceEntryInfoClass" glib:is-gtype-struct-for="PlaceEntryInfo">
+		<field name="parent_class">
+			<type name="GObject.ObjectClass" c:type="GObjectClass"/>
+		</field>
+	</record>
+	<record name="PlaceEntryInfoPrivate" c:type="UnityPlaceEntryInfoPrivate" disguised="1"/>
+	<class name="PlaceController" c:type="UnityPlaceController" glib:type-name="UnityPlaceController" glib:get-type="unity_place_controller_get_type" glib:type-struct="PlaceControllerClass" parent="GObject.Object">
+		<field name="parent_instance">
+			<type name="GObject.Object" c:type="GObject"/>
+		</field>
+		<field name="priv">
+			<type name="PlaceControllerPrivate" c:type="UnityPlaceControllerPrivate*"/>
+		</field>
+		<constructor name="new" c:identifier="unity_place_controller_new">
+			<parameters>
+				<parameter name="dbus_path" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="full">
+				<type name="Unity.PlaceController" c:type="UnityPlaceController*"/>
+			</return-value>
+		</constructor>
+		<method name="add_entry" c:identifier="unity_place_controller_add_entry">
+			<parameters>
+				<parameter name="entry" transfer-ownership="none">
+					<type name="Unity.PlaceEntryInfo" c:type="UnityPlaceEntryInfo*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<method name="get_entry" c:identifier="unity_place_controller_get_entry">
+			<parameters>
+				<parameter name="dbus_path" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="full" allow-none="1">
+				<type name="Unity.PlaceEntryInfo" c:type="UnityPlaceEntryInfo*"/>
+			</return-value>
+		</method>
+		<method name="remove_entry" c:identifier="unity_place_controller_remove_entry">
+			<parameters>
+				<parameter name="dbus_path" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<method name="num_entries" c:identifier="unity_place_controller_num_entries">
+			<return-value transfer-ownership="full">
+				<type name="guint" c:type="guint"/>
+			</return-value>
+		</method>
+		<method name="get_entry_paths" c:identifier="unity_place_controller_get_entry_paths">
+			<parameters>
+				<parameter name="result_length1" direction="out" transfer-ownership="none">
+					<type name="gint" c:type="gint"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="full">
+				<array length="0">
+					<type name="utf8" c:type="gchar*"/>
+				</array>
+			</return-value>
+		</method>
+		<method name="get_entries" c:identifier="unity_place_controller_get_entries">
+			<parameters>
+				<parameter name="result_length1" direction="out" transfer-ownership="none">
+					<type name="gint" c:type="gint"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="full">
+				<array length="0">
+					<type name="Unity.PlaceEntryInfo" c:type="UnityPlaceEntryInfo*"/>
+				</array>
+			</return-value>
+		</method>
+		<method name="export" c:identifier="unity_place_controller_export" throws="1">
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<method name="unexport" c:identifier="unity_place_controller_unexport" throws="1">
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<property name="dbus-path" writable="1" construct-only="1">
+			<annotation key="property.blurb" value="The DBus path this object is exported under"/>
+			<annotation key="property.nick" value="DBus object path"/>
+			<type name="utf8" c:type="gchar*"/>
+		</property>
+		<property name="exported">
+			<type name="gboolean" c:type="gboolean"/>
+		</property>
+		<property name="activation" writable="1">
+			<type name="Unity.Activation" c:type="UnityActivation*"/>
+		</property>
+	</class>
+	<record name="PlaceControllerClass" c:type="UnityPlaceControllerClass" glib:is-gtype-struct-for="PlaceController">
+		<field name="parent_class">
+			<type name="GObject.ObjectClass" c:type="GObjectClass"/>
+		</field>
+	</record>
+	<record name="PlaceControllerPrivate" c:type="UnityPlaceControllerPrivate" disguised="1"/>
+	<class name="Browser" c:type="UnityBrowser" glib:type-name="UnityBrowser" glib:get-type="unity_browser_get_type" glib:type-struct="BrowserClass" parent="GObject.Object">
+		<field name="parent_instance">
+			<type name="GObject.Object" c:type="GObject"/>
+		</field>
+		<field name="priv">
+			<type name="BrowserPrivate" c:type="UnityBrowserPrivate*"/>
+		</field>
+		<constructor name="new" c:identifier="unity_browser_new">
+			<parameters>
+				<parameter name="dbus_path" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="full">
+				<type name="Unity.Browser" c:type="UnityBrowser*"/>
+			</return-value>
+		</constructor>
+		<method name="record_state" c:identifier="unity_browser_record_state">
+			<parameters>
+				<parameter name="state" transfer-ownership="none" allow-none="1">
+					<type name="gpointer" c:type="gpointer"/>
+				</parameter>
+				<parameter name="comment" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<method name="clear" c:identifier="unity_browser_clear">
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<method name="go_back" c:identifier="unity_browser_go_back">
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<method name="go_forward" c:identifier="unity_browser_go_forward">
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<property name="dbus-path" writable="1">
+			<type name="utf8" c:type="gchar*"/>
+		</property>
+		<glib:signal name="back">
+			<parameters>
+				<parameter name="state" transfer-ownership="none" allow-none="1">
+					<type name="gpointer" c:type="gpointer"/>
+				</parameter>
+				<parameter name="comment" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</glib:signal>
+		<glib:signal name="forward">
+			<parameters>
+				<parameter name="state" transfer-ownership="none" allow-none="1">
+					<type name="gpointer" c:type="gpointer"/>
+				</parameter>
+				<parameter name="comment" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</glib:signal>
+	</class>
+	<record name="BrowserClass" c:type="UnityBrowserClass" glib:is-gtype-struct-for="Browser">
+		<field name="parent_class">
+			<type name="GObject.ObjectClass" c:type="GObjectClass"/>
+		</field>
+	</record>
+	<record name="BrowserPrivate" c:type="UnityBrowserPrivate" disguised="1"/>
+	<record name="Stack">
+		<constructor name="new" c:identifier="unity_stack_new">
+			<return-value transfer-ownership="full">
+				<type name="Unity.Stack" c:type="UnityStack*"/>
+			</return-value>
+		</constructor>
+		<method name="push" c:identifier="unity_stack_push">
+			<parameters>
+				<parameter name="element" transfer-ownership="none" allow-none="1">
+					<type name="gpointer" c:type="gpointer"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="full">
+				<type name="Unity.Stack" c:type="UnityStack*">
+					<type name="gpointer" c:type="gpointer"/>
+				</type>
+			</return-value>
+		</method>
+		<method name="pop" c:identifier="unity_stack_pop">
+			<return-value transfer-ownership="full" allow-none="1">
+				<type name="gpointer" c:type="gpointer"/>
+			</return-value>
+		</method>
+		<method name="peek" c:identifier="unity_stack_peek">
+			<return-value transfer-ownership="full" allow-none="1">
+				<type name="gpointer" c:type="gpointer"/>
+			</return-value>
+		</method>
+		<method name="size" c:identifier="unity_stack_size">
+			<return-value transfer-ownership="full">
+				<type name="gint" c:type="gint"/>
+			</return-value>
+		</method>
+		<method name="clear" c:identifier="unity_stack_clear">
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<method name="is_empty" c:identifier="unity_stack_is_empty">
+			<return-value transfer-ownership="full">
+				<type name="gboolean" c:type="gboolean"/>
+			</return-value>
+		</method>
+	</record>
+	<interface name="Activation" c:type="UnityActivation" glib:type-name="UnityActivation" glib:get-type="unity_activation_get_type" glib:type-struct="ActivationIface">
+		<prerequisite name="GObject.Object"/>
+		<annotation key="dbus.name" value="com.canonical.Unity.Activation"/>
+		<method name="activate" c:identifier="unity_activation_activate">
+			<parameters>
+				<parameter name="uri" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+				<parameter name="_callback_" transfer-ownership="none" allow-none="1" closure="2" scope="async">
+					<type name="Gio.AsyncReadyCallback" c:type="GAsyncReadyCallback"/>
+				</parameter>
+				<parameter name="_callback__target" transfer-ownership="none" allow-none="1">
+					<type name="gpointer" c:type="void*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</method>
+		<method name="activate_finish" c:identifier="unity_activation_activate_finish" throws="1">
+			<parameters>
+				<parameter name="_res_" transfer-ownership="none">
+					<type name="Gio.AsyncResult" c:type="GAsyncResult*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="full">
+				<type name="guint32" c:type="guint32"/>
+			</return-value>
+		</method>
+		<virtual-method name="activate" invoker="activate">
+			<parameters>
+				<parameter name="uri" transfer-ownership="none">
+					<type name="utf8" c:type="const gchar*"/>
+				</parameter>
+				<parameter name="_callback_" transfer-ownership="none" allow-none="1" closure="2" scope="async">
+					<type name="Gio.AsyncReadyCallback" c:type="GAsyncReadyCallback"/>
+				</parameter>
+				<parameter name="_callback__target" transfer-ownership="none" allow-none="1">
+					<type name="gpointer" c:type="void*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="none">
+				<type name="none"/>
+			</return-value>
+		</virtual-method>
+		<virtual-method name="activate_finish" invoker="activate_finish" throws="1">
+			<parameters>
+				<parameter name="_res_" transfer-ownership="none">
+					<type name="Gio.AsyncResult" c:type="GAsyncResult*"/>
+				</parameter>
+			</parameters>
+			<return-value transfer-ownership="full">
+				<type name="guint32" c:type="guint32"/>
+			</return-value>
+		</virtual-method>
+	</interface>
+	<record name="ActivationIface" c:type="UnityActivationIface" glib:is-gtype-struct-for="Activation">
+		<field name="parent_iface">
+			<type name="GObject.TypeInterface" c:type="GTypeInterface"/>
+		</field>
+		<field name="activate">
+			<callback name="activation_activate" c:type="activation_activate">
+				<parameters>
+					<parameter name="uri" transfer-ownership="none">
+						<type name="utf8" c:type="const gchar*"/>
+					</parameter>
+					<parameter name="_callback_" transfer-ownership="none" allow-none="1" closure="2" scope="async">
+						<type name="Gio.AsyncReadyCallback" c:type="GAsyncReadyCallback"/>
+					</parameter>
+					<parameter name="_callback__target" transfer-ownership="none" allow-none="1">
+						<type name="gpointer" c:type="void*"/>
+					</parameter>
+				</parameters>
+				<return-value transfer-ownership="none">
+					<type name="none"/>
+				</return-value>
+			</callback>
+			<callback name="activation_activate_finish" c:type="activation_activate_finish" throws="1">
+				<parameters>
+					<parameter name="_res_" transfer-ownership="none">
+						<type name="Gio.AsyncResult" c:type="GAsyncResult*"/>
+					</parameter>
+				</parameters>
+				<return-value transfer-ownership="full">
+					<type name="guint32" c:type="guint32"/>
+				</return-value>
+			</callback>
+		</field>
+	</record>
+</namespace>
+</repository>

@@ -1,0 +1,1003 @@
+<?xml version="1.0"?>
+<!-- This file was automatically generated from C sources - DO NOT EDIT!
+To affect the contents of this file, edit the original C definitions,
+and/or use gtk-doc annotations.  -->
+<repository version="1.1"
+            xmlns="http://www.gtk.org/introspection/core/1.0"
+            xmlns:c="http://www.gtk.org/introspection/c/1.0"
+            xmlns:glib="http://www.gtk.org/introspection/glib/1.0">
+  <include name="GLib" version="2.0"/>
+  <include name="GObject" version="2.0"/>
+  <package name="babl"/>
+  <namespace name="Babl"
+             version="0.0"
+             shared-library="libbabl-0.0.so.0"
+             c:prefix="Babl">
+    <alias name="ClassType" target="uint" c:type="BablClassType"/>
+    <union name="Babl" c:type="Babl">
+      <field name="class_type" writable="1">
+        <type name="ClassType" c:type="BablClassType"/>
+      </field>
+      <field name="instance" writable="1">
+        <type name="Instance" c:type="BablInstance"/>
+      </field>
+      <field name="type" writable="1">
+        <type name="Type" c:type="BablType"/>
+      </field>
+      <field name="sampling" writable="1">
+        <type name="Sampling" c:type="BablSampling"/>
+      </field>
+      <field name="component" writable="1">
+        <type name="Component" c:type="BablComponent"/>
+      </field>
+      <field name="model" writable="1">
+        <type name="Model" c:type="BablModel"/>
+      </field>
+      <field name="format" writable="1">
+        <type name="Format" c:type="BablFormat"/>
+      </field>
+      <field name="conversion" writable="1">
+        <type name="Conversion" c:type="BablConversion"/>
+      </field>
+      <field name="image" writable="1">
+        <type name="Image" c:type="BablImage"/>
+      </field>
+      <field name="fish" writable="1">
+        <type name="Fish" c:type="BablFish"/>
+      </field>
+      <field name="fish_reference" writable="1">
+        <type name="FishReference" c:type="BablFishReference"/>
+      </field>
+      <field name="fish_simple" writable="1">
+        <type name="FishSimple" c:type="BablFishSimple"/>
+      </field>
+      <field name="fish_path" writable="1">
+        <type name="FishPath" c:type="BablFishPath"/>
+      </field>
+      <field name="extension" writable="1">
+        <type name="Extension" c:type="BablExtension"/>
+      </field>
+      <method name="name" c:identifier="babl_name">
+        <doc xml:whitespace="preserve">Return a string decsribing a BablInstance, might work better than
+babl-&gt;instance.name when a good human readable name is desired.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:whitespace="preserve">a name describing the instance.</doc>
+          <type name="utf8" c:type="char*"/>
+        </return-value>
+      </method>
+      <method name="introspect" c:identifier="babl_introspect">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+      </method>
+      <method name="process" c:identifier="babl_process">
+        <return-value transfer-ownership="none">
+          <type name="long" c:type="long"/>
+        </return-value>
+        <parameters>
+          <parameter name="source" transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter name="destination" transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter name="n" transfer-ownership="none">
+            <type name="long" c:type="long"/>
+          </parameter>
+        </parameters>
+      </method>
+    </union>
+    <record name="Component" c:type="BablComponent">
+      <field name="instance" writable="1">
+        <type name="Instance" c:type="BablInstance"/>
+      </field>
+      <field name="luma" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="chroma" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="alpha" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <constructor name="new"
+                   c:identifier="babl_component_new"
+                   introspectable="0">
+        <return-value transfer-ownership="full">
+          <type name="Component" c:type="Babl*"/>
+        </return-value>
+        <parameters>
+          <parameter name="first_arg" transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <varargs>
+            </varargs>
+          </parameter>
+        </parameters>
+      </constructor>
+    </record>
+    <record name="Conversion" c:type="BablConversion">
+      <field name="instance" writable="1">
+        <type name="Instance" c:type="BablInstance"/>
+      </field>
+      <field name="source" writable="1">
+        <type name="Babl" c:type="Babl*"/>
+      </field>
+      <field name="destination" writable="1">
+        <type name="Babl" c:type="Babl*"/>
+      </field>
+      <field name="cost" writable="1">
+        <type name="long" c:type="long"/>
+      </field>
+      <field name="error" writable="1">
+        <type name="double" c:type="double"/>
+      </field>
+      <union name="function" c:type="function">
+        <field name="linear" writable="1">
+          <type name="FuncLinear" c:type="BablFuncLinear"/>
+        </field>
+        <field name="plane" writable="1">
+          <type name="FuncPlane" c:type="BablFuncPlane"/>
+        </field>
+        <field name="planar" writable="1">
+          <type name="FuncPlanar" c:type="BablFuncPlanar"/>
+        </field>
+      </union>
+      <field name="processings" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="pixels" writable="1">
+        <type name="long" c:type="long"/>
+      </field>
+      <constructor name="new"
+                   c:identifier="babl_conversion_new"
+                   introspectable="0">
+        <return-value transfer-ownership="full">
+          <type name="Conversion" c:type="Babl*"/>
+        </return-value>
+        <parameters>
+          <parameter name="first_arg" transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <varargs>
+            </varargs>
+          </parameter>
+        </parameters>
+      </constructor>
+    </record>
+    <callback name="EachFunction" c:type="BablEachFunction">
+      <return-value transfer-ownership="none">
+        <type name="int" c:type="int"/>
+      </return-value>
+      <parameters>
+        <parameter name="entry" transfer-ownership="none">
+          <type name="Babl" c:type="Babl*"/>
+        </parameter>
+        <parameter name="data" transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </parameter>
+      </parameters>
+    </callback>
+    <record name="Extension" c:type="BablExtension">
+      <field name="instance" writable="1">
+        <type name="Instance" c:type="BablInstance"/>
+      </field>
+      <field name="dl_handle" writable="1">
+        <type name="any" c:type="void*"/>
+      </field>
+      <field name="destroy">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <constructor name="new"
+                   c:identifier="babl_extension_new"
+                   introspectable="0">
+        <return-value transfer-ownership="full">
+          <type name="Extension" c:type="Babl*"/>
+        </return-value>
+        <parameters>
+          <parameter name="first_arg" transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <varargs>
+            </varargs>
+          </parameter>
+        </parameters>
+      </constructor>
+    </record>
+    <record name="Fish" c:type="BablFish">
+      <field name="instance" writable="1">
+        <type name="Instance" c:type="BablInstance"/>
+      </field>
+      <field name="source" writable="1">
+        <type name="Babl" c:type="Babl*"/>
+      </field>
+      <field name="destination" writable="1">
+        <type name="Babl" c:type="Babl*"/>
+      </field>
+      <field name="error" writable="1">
+        <type name="double" c:type="double"/>
+      </field>
+      <field name="processings" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="pixels" writable="1">
+        <type name="long" c:type="long"/>
+      </field>
+      <field name="usecs" writable="1">
+        <type name="long" c:type="long"/>
+      </field>
+    </record>
+    <record name="FishPath" c:type="BablFishPath">
+      <field name="fish" writable="1">
+        <type name="Fish" c:type="BablFish"/>
+      </field>
+      <field name="cost" writable="1">
+        <type name="double" c:type="double"/>
+      </field>
+      <field name="loss" writable="1">
+        <type name="double" c:type="double"/>
+      </field>
+      <field name="conversion_list" writable="1">
+        <type name="List" c:type="BablList*"/>
+      </field>
+    </record>
+    <record name="FishReference" c:type="BablFishReference">
+      <field name="fish" writable="1">
+        <type name="Fish" c:type="BablFish"/>
+      </field>
+    </record>
+    <record name="FishSimple" c:type="BablFishSimple">
+      <field name="fish" writable="1">
+        <type name="Fish" c:type="BablFish"/>
+      </field>
+      <field name="conversion" writable="1">
+        <type name="Conversion" c:type="BablConversion*"/>
+      </field>
+    </record>
+    <record name="Format" c:type="BablFormat">
+      <field name="instance" writable="1">
+        <type name="Instance" c:type="BablInstance"/>
+      </field>
+      <field name="from_list" writable="1">
+        <type name="List" c:type="BablList*"/>
+      </field>
+      <field name="components" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="component" writable="1">
+        <type name="Component" c:type="BablComponent**"/>
+      </field>
+      <field name="type" writable="1">
+        <type name="Type" c:type="BablType**"/>
+      </field>
+      <field name="image_template" writable="1">
+        <type name="any" c:type="void*"/>
+      </field>
+      <field name="sampling" writable="1">
+        <type name="Sampling" c:type="BablSampling**"/>
+      </field>
+      <field name="model" writable="1">
+        <type name="Model" c:type="BablModel*"/>
+      </field>
+      <field name="bytes_per_pixel" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="planar" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="loss" writable="1">
+        <type name="double" c:type="double"/>
+      </field>
+      <field name="visited" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <constructor name="new"
+                   c:identifier="babl_format_new"
+                   introspectable="0">
+        <return-value transfer-ownership="full">
+          <type name="Format" c:type="Babl*"/>
+        </return-value>
+        <parameters>
+          <parameter name="first_arg" transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <varargs>
+            </varargs>
+          </parameter>
+        </parameters>
+      </constructor>
+    </record>
+    <callback name="FuncLinear" c:type="BablFuncLinear">
+      <return-value transfer-ownership="none">
+        <type name="long" c:type="long"/>
+      </return-value>
+      <parameters>
+        <parameter name="src" transfer-ownership="full">
+          <type name="utf8" c:type="char*"/>
+        </parameter>
+        <parameter name="dst" transfer-ownership="full">
+          <type name="utf8" c:type="char*"/>
+        </parameter>
+        <parameter name="n" transfer-ownership="none">
+          <type name="long" c:type="long"/>
+        </parameter>
+      </parameters>
+    </callback>
+    <callback name="FuncPlanar" c:type="BablFuncPlanar">
+      <return-value transfer-ownership="none">
+        <type name="long" c:type="long"/>
+      </return-value>
+      <parameters>
+        <parameter name="src_bands" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+        <parameter name="src" transfer-ownership="full">
+          <type name="utf8" c:type="char*"/>
+        </parameter>
+        <parameter name="src_pitch" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+        <parameter name="dst_bands" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+        <parameter name="dst" transfer-ownership="full">
+          <type name="utf8" c:type="char*"/>
+        </parameter>
+        <parameter name="dst_pitch" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+        <parameter name="n" transfer-ownership="none">
+          <type name="long" c:type="long"/>
+        </parameter>
+      </parameters>
+    </callback>
+    <callback name="FuncPlane" c:type="BablFuncPlane">
+      <return-value transfer-ownership="none">
+        <type name="long" c:type="long"/>
+      </return-value>
+      <parameters>
+        <parameter name="src" transfer-ownership="full">
+          <type name="utf8" c:type="char*"/>
+        </parameter>
+        <parameter name="dst" transfer-ownership="full">
+          <type name="utf8" c:type="char*"/>
+        </parameter>
+        <parameter name="src_pitch" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+        <parameter name="dst_pitch" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+        <parameter name="n" transfer-ownership="none">
+          <type name="long" c:type="long"/>
+        </parameter>
+      </parameters>
+    </callback>
+    <constant name="HARD_MAX_PATH_LENGTH" value="16">
+      <type name="int"/>
+    </constant>
+    <record name="Image" c:type="BablImage">
+      <field name="instance" writable="1">
+        <type name="Instance" c:type="BablInstance"/>
+      </field>
+      <field name="format" writable="1">
+        <type name="Format" c:type="BablFormat*"/>
+      </field>
+      <field name="model" writable="1">
+        <type name="Model" c:type="BablModel*"/>
+      </field>
+      <field name="components" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="component" writable="1">
+        <type name="Component" c:type="BablComponent**"/>
+      </field>
+      <field name="type" writable="1">
+        <type name="Type" c:type="BablType**"/>
+      </field>
+      <field name="sampling" writable="1">
+        <type name="Sampling" c:type="BablSampling**"/>
+      </field>
+      <field name="data" writable="1">
+        <type name="utf8" c:type="char**"/>
+      </field>
+      <field name="pitch" writable="1">
+        <type name="any" c:type="int*"/>
+      </field>
+      <field name="stride" writable="1">
+        <type name="any" c:type="int*"/>
+      </field>
+    </record>
+    <record name="Instance" c:type="BablInstance">
+      <field name="class_type" writable="1">
+        <type name="ClassType" c:type="BablClassType"/>
+      </field>
+      <field name="id" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="creator" writable="1">
+        <type name="any" c:type="void*"/>
+      </field>
+      <field name="name" writable="1">
+        <type name="utf8" c:type="char*"/>
+      </field>
+    </record>
+    <record name="List" c:type="BablList">
+    </record>
+    <constant name="MAGIC" value="12235008">
+      <type name="int"/>
+    </constant>
+    <constant name="MAJOR_VERSION" value="0">
+      <type name="int"/>
+    </constant>
+    <constant name="MICRO_VERSION" value="22">
+      <type name="int"/>
+    </constant>
+    <constant name="MINOR_VERSION" value="0">
+      <type name="int"/>
+    </constant>
+    <record name="Model" c:type="BablModel">
+      <field name="instance" writable="1">
+        <type name="Instance" c:type="BablInstance"/>
+      </field>
+      <field name="from_list" writable="1">
+        <type name="List" c:type="BablList*"/>
+      </field>
+      <field name="components" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="component" writable="1">
+        <type name="Component" c:type="BablComponent**"/>
+      </field>
+      <field name="type" writable="1">
+        <type name="Type" c:type="BablType**"/>
+      </field>
+      <constructor name="new" c:identifier="babl_model_new" introspectable="0">
+        <return-value transfer-ownership="full">
+          <type name="Model" c:type="Babl*"/>
+        </return-value>
+        <parameters>
+          <parameter name="first_arg" transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <varargs>
+            </varargs>
+          </parameter>
+        </parameters>
+      </constructor>
+    </record>
+    <record name="Sampling" c:type="BablSampling">
+      <field name="instance" writable="1">
+        <type name="Instance" c:type="BablInstance"/>
+      </field>
+      <field name="from_list" writable="1">
+        <type name="List" c:type="BablList*"/>
+      </field>
+      <field name="horizontal" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="vertical" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="name" writable="1">
+        <array zero-terminated="0" c:type="char" fixed-size="4">
+          <type name="int8"/>
+        </array>
+      </field>
+    </record>
+    <record name="Type" c:type="BablType">
+      <field name="instance" writable="1">
+        <type name="Instance" c:type="BablInstance"/>
+      </field>
+      <field name="from_list" writable="1">
+        <type name="List" c:type="BablList*"/>
+      </field>
+      <field name="bits" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="min_val" writable="1">
+        <type name="double" c:type="double"/>
+      </field>
+      <field name="max_val" writable="1">
+        <type name="double" c:type="double"/>
+      </field>
+      <constructor name="new" c:identifier="babl_type_new" introspectable="0">
+        <return-value transfer-ownership="full">
+          <type name="Type" c:type="Babl*"/>
+        </return-value>
+        <parameters>
+          <parameter name="first_arg" transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <varargs>
+            </varargs>
+          </parameter>
+        </parameters>
+      </constructor>
+    </record>
+    <record name="TypeFloat" c:type="BablTypeFloat">
+      <field name="type" writable="1">
+        <type name="Type" c:type="BablType"/>
+      </field>
+    </record>
+    <record name="TypeInteger" c:type="BablTypeInteger">
+      <field name="type" writable="1">
+        <type name="Type" c:type="BablType"/>
+      </field>
+      <field name="is_signed" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="max" writable="1">
+        <type name="long" c:type="long"/>
+      </field>
+      <field name="min" writable="1">
+        <type name="long" c:type="long"/>
+      </field>
+    </record>
+    <function name="component" c:identifier="babl_component">
+      <return-value transfer-ownership="full">
+        <type name="Babl" c:type="Babl*"/>
+      </return-value>
+      <parameters>
+        <parameter name="name" transfer-ownership="none">
+          <type name="utf8" c:type="char*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="component_destroy" c:identifier="babl_component_destroy">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+    </function>
+    <function name="component_each" c:identifier="babl_component_each">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="each_fun"
+                   transfer-ownership="none"
+                   scope="call"
+                   closure="1">
+          <type name="EachFunction" c:type="BablEachFunction"/>
+        </parameter>
+        <parameter name="user_data" transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="component_id" c:identifier="babl_component_id">
+      <return-value transfer-ownership="full">
+        <type name="Babl" c:type="Babl*"/>
+      </return-value>
+      <parameters>
+        <parameter name="id" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="component_init" c:identifier="babl_component_init">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+    </function>
+    <function name="conversion" c:identifier="babl_conversion">
+      <return-value transfer-ownership="full">
+        <type name="Babl" c:type="Babl*"/>
+      </return-value>
+      <parameters>
+        <parameter name="name" transfer-ownership="none">
+          <type name="utf8" c:type="char*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="conversion_destroy" c:identifier="babl_conversion_destroy">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+    </function>
+    <function name="conversion_each" c:identifier="babl_conversion_each">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="each_fun"
+                   transfer-ownership="none"
+                   scope="call"
+                   closure="1">
+          <type name="EachFunction" c:type="BablEachFunction"/>
+        </parameter>
+        <parameter name="user_data" transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="conversion_id" c:identifier="babl_conversion_id">
+      <return-value transfer-ownership="full">
+        <type name="Babl" c:type="Babl*"/>
+      </return-value>
+      <parameters>
+        <parameter name="id" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="conversion_init" c:identifier="babl_conversion_init">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+    </function>
+    <function name="destroy" c:identifier="babl_destroy">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+    </function>
+    <function name="extension" c:identifier="babl_extension">
+      <return-value transfer-ownership="full">
+        <type name="Babl" c:type="Babl*"/>
+      </return-value>
+      <parameters>
+        <parameter name="name" transfer-ownership="none">
+          <type name="utf8" c:type="char*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="extension_destroy" c:identifier="babl_extension_destroy">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+    </function>
+    <function name="extension_each" c:identifier="babl_extension_each">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="each_fun"
+                   transfer-ownership="none"
+                   scope="call"
+                   closure="1">
+          <type name="EachFunction" c:type="BablEachFunction"/>
+        </parameter>
+        <parameter name="user_data" transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="extension_id" c:identifier="babl_extension_id">
+      <return-value transfer-ownership="full">
+        <type name="Babl" c:type="Babl*"/>
+      </return-value>
+      <parameters>
+        <parameter name="id" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="extension_init" c:identifier="babl_extension_init">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+    </function>
+    <function name="fish" c:identifier="babl_fish">
+      <return-value transfer-ownership="full">
+        <type name="Babl" c:type="Babl*"/>
+      </return-value>
+      <parameters>
+        <parameter name="source_format" transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </parameter>
+        <parameter name="destination_format" transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="fish_destroy" c:identifier="babl_fish_destroy">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+    </function>
+    <function name="fish_each" c:identifier="babl_fish_each">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="each_fun"
+                   transfer-ownership="none"
+                   scope="call"
+                   closure="1">
+          <type name="EachFunction" c:type="BablEachFunction"/>
+        </parameter>
+        <parameter name="user_data" transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="fish_id" c:identifier="babl_fish_id">
+      <return-value transfer-ownership="full">
+        <type name="Babl" c:type="Babl*"/>
+      </return-value>
+      <parameters>
+        <parameter name="id" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="fish_init" c:identifier="babl_fish_init">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+    </function>
+    <function name="format" c:identifier="babl_format">
+      <return-value transfer-ownership="full">
+        <type name="Babl" c:type="Babl*"/>
+      </return-value>
+      <parameters>
+        <parameter name="name" transfer-ownership="none">
+          <type name="utf8" c:type="char*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="format_destroy" c:identifier="babl_format_destroy">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+    </function>
+    <function name="format_each" c:identifier="babl_format_each">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="each_fun"
+                   transfer-ownership="none"
+                   scope="call"
+                   closure="1">
+          <type name="EachFunction" c:type="BablEachFunction"/>
+        </parameter>
+        <parameter name="user_data" transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="format_id" c:identifier="babl_format_id">
+      <return-value transfer-ownership="full">
+        <type name="Babl" c:type="Babl*"/>
+      </return-value>
+      <parameters>
+        <parameter name="id" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="format_init" c:identifier="babl_format_init">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+    </function>
+    <function name="get_version" c:identifier="babl_get_version">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="major"
+                   direction="out"
+                   caller-allocates="0"
+                   transfer-ownership="full">
+          <type name="int" c:type="int*"/>
+        </parameter>
+        <parameter name="minor"
+                   direction="out"
+                   caller-allocates="0"
+                   transfer-ownership="full">
+          <type name="int" c:type="int*"/>
+        </parameter>
+        <parameter name="micro"
+                   direction="out"
+                   caller-allocates="0"
+                   transfer-ownership="full">
+          <type name="int" c:type="int*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="image" c:identifier="babl_image" introspectable="0">
+      <return-value transfer-ownership="full">
+        <type name="Babl" c:type="Babl*"/>
+      </return-value>
+      <parameters>
+        <parameter name="first_component" transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </parameter>
+        <parameter transfer-ownership="none">
+          <varargs>
+          </varargs>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="image_destroy" c:identifier="babl_image_destroy">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+    </function>
+    <function name="image_each" c:identifier="babl_image_each">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="each_fun"
+                   transfer-ownership="none"
+                   scope="call"
+                   closure="1">
+          <type name="EachFunction" c:type="BablEachFunction"/>
+        </parameter>
+        <parameter name="user_data" transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="image_id" c:identifier="babl_image_id">
+      <return-value transfer-ownership="full">
+        <type name="Babl" c:type="Babl*"/>
+      </return-value>
+      <parameters>
+        <parameter name="id" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="image_init" c:identifier="babl_image_init">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+    </function>
+    <function name="init" c:identifier="babl_init">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+    </function>
+    <function name="model" c:identifier="babl_model">
+      <return-value transfer-ownership="full">
+        <type name="Babl" c:type="Babl*"/>
+      </return-value>
+      <parameters>
+        <parameter name="name" transfer-ownership="none">
+          <type name="utf8" c:type="char*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="model_destroy" c:identifier="babl_model_destroy">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+    </function>
+    <function name="model_each" c:identifier="babl_model_each">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="each_fun"
+                   transfer-ownership="none"
+                   scope="call"
+                   closure="1">
+          <type name="EachFunction" c:type="BablEachFunction"/>
+        </parameter>
+        <parameter name="user_data" transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="model_id" c:identifier="babl_model_id">
+      <return-value transfer-ownership="full">
+        <type name="Babl" c:type="Babl*"/>
+      </return-value>
+      <parameters>
+        <parameter name="id" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="model_init" c:identifier="babl_model_init">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+    </function>
+    <function name="sampling" c:identifier="babl_sampling">
+      <return-value transfer-ownership="full">
+        <type name="Babl" c:type="Babl*"/>
+      </return-value>
+      <parameters>
+        <parameter name="horizontal" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+        <parameter name="vertical" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="sampling_destroy" c:identifier="babl_sampling_destroy">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+    </function>
+    <function name="sampling_each" c:identifier="babl_sampling_each">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="each_fun"
+                   transfer-ownership="none"
+                   scope="call"
+                   closure="1">
+          <type name="EachFunction" c:type="BablEachFunction"/>
+        </parameter>
+        <parameter name="user_data" transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="sampling_id" c:identifier="babl_sampling_id">
+      <return-value transfer-ownership="full">
+        <type name="Babl" c:type="Babl*"/>
+      </return-value>
+      <parameters>
+        <parameter name="id" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="sampling_init" c:identifier="babl_sampling_init">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+    </function>
+    <function name="type" c:identifier="babl_type">
+      <return-value transfer-ownership="full">
+        <type name="Babl" c:type="Babl*"/>
+      </return-value>
+      <parameters>
+        <parameter name="name" transfer-ownership="none">
+          <type name="utf8" c:type="char*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="type_destroy" c:identifier="babl_type_destroy">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+    </function>
+    <function name="type_each" c:identifier="babl_type_each">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="each_fun"
+                   transfer-ownership="none"
+                   scope="call"
+                   closure="1">
+          <type name="EachFunction" c:type="BablEachFunction"/>
+        </parameter>
+        <parameter name="user_data" transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="type_id" c:identifier="babl_type_id">
+      <return-value transfer-ownership="full">
+        <type name="Babl" c:type="Babl*"/>
+      </return-value>
+      <parameters>
+        <parameter name="id" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="type_init" c:identifier="babl_type_init">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+    </function>
+  </namespace>
+</repository>

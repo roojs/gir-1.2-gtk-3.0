@@ -1,0 +1,2932 @@
+<?xml version="1.0"?>
+<!-- This file was automatically generated from C sources - DO NOT EDIT!
+To affect the contents of this file, edit the original C definitions,
+and/or use gtk-doc annotations.  -->
+<repository version="1.0"
+            xmlns="http://www.gtk.org/introspection/core/1.0"
+            xmlns:c="http://www.gtk.org/introspection/c/1.0"
+            xmlns:glib="http://www.gtk.org/introspection/glib/1.0">
+  <namespace name="sqlite3"
+             version="1.0"
+             shared-library="libsqlite3.so.0"
+             c:prefix="sqlite3">
+    <alias name="int64" target="sqlite_int64" c:type="sqlite3_int64"/>
+    <alias name="sqlite_int64" target="long long int" c:type="sqlite_int64"/>
+    <alias name="sqlite_uint64"
+           target="unsigned long long int"
+           c:type="sqlite_uint64"/>
+    <alias name="uint64" target="sqlite_uint64" c:type="sqlite3_uint64"/>
+    <constant name="SQLITE_ABORT" value="4">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_ACCESS_EXISTS" value="0">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_ACCESS_READ" value="2">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_ACCESS_READWRITE" value="1">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_ALTER_TABLE" value="26">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_ANALYZE" value="28">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_ANY" value="5">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_ATTACH" value="24">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_AUTH" value="23">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_BLOB" value="4">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_BUSY" value="5">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CANTOPEN" value="14">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CONFIG_GETMALLOC" value="5">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CONFIG_GETMUTEX" value="11">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CONFIG_GETPCACHE" value="15">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CONFIG_HEAP" value="8">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CONFIG_LOOKASIDE" value="13">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CONFIG_MALLOC" value="4">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CONFIG_MEMSTATUS" value="9">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CONFIG_MULTITHREAD" value="2">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CONFIG_MUTEX" value="10">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CONFIG_PAGECACHE" value="7">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CONFIG_PCACHE" value="14">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CONFIG_SCRATCH" value="6">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CONFIG_SERIALIZED" value="3">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CONFIG_SINGLETHREAD" value="1">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CONSTRAINT" value="19">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_COPY" value="0">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CORRUPT" value="11">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CREATE_INDEX" value="1">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CREATE_TABLE" value="2">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CREATE_TEMP_INDEX" value="3">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CREATE_TEMP_TABLE" value="4">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CREATE_TEMP_TRIGGER" value="5">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CREATE_TEMP_VIEW" value="6">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CREATE_TRIGGER" value="7">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CREATE_VIEW" value="8">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_CREATE_VTABLE" value="29">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_DBCONFIG_LOOKASIDE" value="1001">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_DBSTATUS_LOOKASIDE_USED" value="0">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_DELETE" value="9">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_DENY" value="1">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_DETACH" value="25">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_DONE" value="101">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_DROP_INDEX" value="10">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_DROP_TABLE" value="11">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_DROP_TEMP_INDEX" value="12">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_DROP_TEMP_TABLE" value="13">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_DROP_TEMP_TRIGGER" value="14">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_DROP_TEMP_VIEW" value="15">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_DROP_TRIGGER" value="16">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_DROP_VIEW" value="17">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_DROP_VTABLE" value="30">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_EMPTY" value="16">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_ERROR" value="1">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_FCNTL_LOCKSTATE" value="1">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_FLOAT" value="2">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_FORMAT" value="24">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_FULL" value="13">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_FUNCTION" value="31">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_GET_LOCKPROXYFILE" value="2">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IGNORE" value="2">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_INDEX_CONSTRAINT_EQ" value="2">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_INDEX_CONSTRAINT_GE" value="32">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_INDEX_CONSTRAINT_GT" value="4">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_INDEX_CONSTRAINT_LE" value="8">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_INDEX_CONSTRAINT_LT" value="16">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_INDEX_CONSTRAINT_MATCH" value="64">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_INSERT" value="18">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_INTEGER" value="1">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_INTERNAL" value="2">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_INTERRUPT" value="9">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOCAP_ATOMIC" value="1">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOCAP_ATOMIC16K" value="64">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOCAP_ATOMIC1K" value="4">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOCAP_ATOMIC2K" value="8">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOCAP_ATOMIC32K" value="128">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOCAP_ATOMIC4K" value="16">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOCAP_ATOMIC512" value="2">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOCAP_ATOMIC64K" value="256">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOCAP_ATOMIC8K" value="32">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOCAP_SAFE_APPEND" value="512">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOCAP_SEQUENTIAL" value="1024">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOERR" value="10">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOERR_ACCESS" value="3328">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOERR_BLOCKED" value="2816">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOERR_CHECKRESERVEDLOCK" value="3584">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOERR_CLOSE" value="4096">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOERR_DELETE" value="2560">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOERR_DIR_CLOSE" value="4352">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOERR_DIR_FSYNC" value="1280">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOERR_FSTAT" value="1792">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOERR_FSYNC" value="1024">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOERR_LOCK" value="3840">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOERR_NOMEM" value="3072">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOERR_RDLOCK" value="2304">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOERR_READ" value="256">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOERR_SHORT_READ" value="512">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOERR_TRUNCATE" value="1536">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOERR_UNLOCK" value="2048">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_IOERR_WRITE" value="768">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_LAST_ERRNO" value="4">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_LIMIT_ATTACHED" value="7">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_LIMIT_COLUMN" value="2">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_LIMIT_COMPOUND_SELECT" value="4">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_LIMIT_EXPR_DEPTH" value="3">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_LIMIT_FUNCTION_ARG" value="6">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_LIMIT_LENGTH" value="0">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_LIMIT_LIKE_PATTERN_LENGTH" value="8">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_LIMIT_SQL_LENGTH" value="1">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_LIMIT_VARIABLE_NUMBER" value="9">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_LIMIT_VDBE_OP" value="5">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_LOCKED" value="6">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_LOCKED_SHAREDCACHE" value="256">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_LOCK_EXCLUSIVE" value="4">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_LOCK_NONE" value="0">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_LOCK_PENDING" value="3">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_LOCK_RESERVED" value="2">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_LOCK_SHARED" value="1">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_MISMATCH" value="20">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_MISUSE" value="21">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_MUTEX_FAST" value="0">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_MUTEX_RECURSIVE" value="1">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_MUTEX_STATIC_LRU" value="6">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_MUTEX_STATIC_LRU2" value="7">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_MUTEX_STATIC_MASTER" value="2">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_MUTEX_STATIC_MEM" value="3">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_MUTEX_STATIC_MEM2" value="4">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_MUTEX_STATIC_OPEN" value="4">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_MUTEX_STATIC_PRNG" value="5">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_NOLFS" value="22">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_NOMEM" value="7">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_NOTADB" value="26">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_NOTFOUND" value="12">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_NULL" value="5">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_OK" value="0">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_OPEN_CREATE" value="4">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_OPEN_DELETEONCLOSE" value="8">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_OPEN_EXCLUSIVE" value="16">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_OPEN_FULLMUTEX" value="65536">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_OPEN_MAIN_DB" value="256">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_OPEN_MAIN_JOURNAL" value="2048">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_OPEN_MASTER_JOURNAL" value="16384">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_OPEN_NOMUTEX" value="32768">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_OPEN_READONLY" value="1">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_OPEN_READWRITE" value="2">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_OPEN_SUBJOURNAL" value="8192">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_OPEN_TEMP_DB" value="512">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_OPEN_TEMP_JOURNAL" value="4096">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_OPEN_TRANSIENT_DB" value="1024">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_PERM" value="3">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_PRAGMA" value="19">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_PROTOCOL" value="15">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_RANGE" value="25">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_READ" value="20">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_READONLY" value="8">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_REINDEX" value="27">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_ROW" value="100">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_SAVEPOINT" value="32">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_SCHEMA" value="17">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_SELECT" value="21">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_SET_LOCKPROXYFILE" value="3">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_STATUS_MALLOC_SIZE" value="5">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_STATUS_MEMORY_USED" value="0">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_STATUS_PAGECACHE_OVERFLOW" value="2">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_STATUS_PAGECACHE_SIZE" value="7">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_STATUS_PAGECACHE_USED" value="1">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_STATUS_PARSER_STACK" value="6">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_STATUS_SCRATCH_OVERFLOW" value="4">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_STATUS_SCRATCH_SIZE" value="8">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_STATUS_SCRATCH_USED" value="3">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_STMTSTATUS_FULLSCAN_STEP" value="1">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_STMTSTATUS_SORT" value="2">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_SYNC_DATAONLY" value="16">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_SYNC_FULL" value="3">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_SYNC_NORMAL" value="2">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_TESTCTRL_ALWAYS" value="13">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_TESTCTRL_ASSERT" value="12">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_TESTCTRL_BENIGN_MALLOC_HOOKS" value="10">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_TESTCTRL_BITVEC_TEST" value="8">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_TESTCTRL_FAULT_INSTALL" value="9">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_TESTCTRL_PENDING_BYTE" value="11">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_TESTCTRL_PRNG_RESET" value="7">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_TESTCTRL_PRNG_RESTORE" value="6">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_TESTCTRL_PRNG_SAVE" value="5">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_TEXT" value="3">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_TOOBIG" value="18">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_TRANSACTION" value="22">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_TRANSIENT" value="-1">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_UPDATE" value="23">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_UTF16" value="4">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_UTF16BE" value="3">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_UTF16LE" value="2">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_UTF16_ALIGNED" value="8">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_UTF8" value="1">
+      <type name="int"/>
+    </constant>
+    <constant name="SQLITE_VERSION" value="3.6.16">
+      <type name="utf8"/>
+    </constant>
+    <constant name="SQLITE_VERSION_NUMBER" value="3006016">
+      <type name="int"/>
+    </constant>
+    <constant name="TEXT" value="3">
+      <type name="int"/>
+    </constant>
+    <function name="auto_extension" c:identifier="sqlite3_auto_extension">
+      <return-value transfer-ownership="none">
+        <type name="int" c:type="int"/>
+      </return-value>
+      <parameters>
+        <parameter name="xEntryPoint" transfer-ownership="none">
+          <type name="any" c:type="any*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <record name="backup" c:type="sqlite3_backup">
+      <method name="step" c:identifier="sqlite3_backup_step">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="nPage" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="finish" c:identifier="sqlite3_backup_finish">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="remaining" c:identifier="sqlite3_backup_remaining">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="pagecount" c:identifier="sqlite3_backup_pagecount">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+    </record>
+    <record name="blob" c:type="sqlite3_blob">
+      <method name="close" c:identifier="sqlite3_blob_close">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="bytes" c:identifier="sqlite3_blob_bytes">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="read" c:identifier="sqlite3_blob_read">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="Z" transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter name="N" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter name="iOffset" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="write" c:identifier="sqlite3_blob_write">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="z" transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter name="n" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter name="iOffset" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+    </record>
+    <callback name="callback" c:type="sqlite3_callback">
+      <return-value transfer-ownership="none">
+        <type name="int" c:type="int"/>
+      </return-value>
+      <parameters>
+        <parameter transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </parameter>
+        <parameter transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+        <parameter transfer-ownership="none">
+          <array c:type="char**">
+            <type name="utf8"/>
+          </array>
+        </parameter>
+        <parameter transfer-ownership="none">
+          <array c:type="char**">
+            <type name="utf8"/>
+          </array>
+        </parameter>
+      </parameters>
+    </callback>
+    <function name="complete" c:identifier="sqlite3_complete">
+      <return-value transfer-ownership="none">
+        <type name="int" c:type="int"/>
+      </return-value>
+      <parameters>
+        <parameter name="sql" transfer-ownership="none">
+          <type name="utf8" c:type="char*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="complete16" c:identifier="sqlite3_complete16">
+      <return-value transfer-ownership="none">
+        <type name="int" c:type="int"/>
+      </return-value>
+      <parameters>
+        <parameter name="sql" transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="config" c:identifier="sqlite3_config">
+      <return-value transfer-ownership="none">
+        <type name="int" c:type="int"/>
+      </return-value>
+      <parameters>
+        <parameter transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+        <parameter transfer-ownership="none">
+          <varargs>
+          </varargs>
+        </parameter>
+      </parameters>
+    </function>
+    <record name="context" c:type="sqlite3_context">
+      <method name="db_handle" c:identifier="sqlite3_context_db_handle">
+        <return-value transfer-ownership="full">
+          <type name="sqlite3" c:type="sqlite3*"/>
+        </return-value>
+      </method>
+      <method name="aggregate_count" c:identifier="sqlite3_aggregate_count">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="aggregate_context"
+              c:identifier="sqlite3_aggregate_context">
+        <return-value transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </return-value>
+        <parameters>
+          <parameter name="nBytes" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="user_data" c:identifier="sqlite3_user_data">
+        <return-value transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </return-value>
+      </method>
+      <method name="get_auxdata" c:identifier="sqlite3_get_auxdata">
+        <return-value transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </return-value>
+        <parameters>
+          <parameter name="N" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="set_auxdata" c:identifier="sqlite3_set_auxdata">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="N" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="result_blob" c:identifier="sqlite3_result_blob">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="result_double" c:identifier="sqlite3_result_double">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="double" c:type="double"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="result_error" c:identifier="sqlite3_result_error">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="result_error16" c:identifier="sqlite3_result_error16">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="result_error_toobig"
+              c:identifier="sqlite3_result_error_toobig">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+      </method>
+      <method name="result_error_nomem"
+              c:identifier="sqlite3_result_error_nomem">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+      </method>
+      <method name="result_error_code"
+              c:identifier="sqlite3_result_error_code">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="result_int" c:identifier="sqlite3_result_int">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="result_int64" c:identifier="sqlite3_result_int64">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="int64" c:type="sqlite3_int64"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="result_null" c:identifier="sqlite3_result_null">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+      </method>
+      <method name="result_text" c:identifier="sqlite3_result_text">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="result_text16" c:identifier="sqlite3_result_text16">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="result_text16le" c:identifier="sqlite3_result_text16le">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="result_text16be" c:identifier="sqlite3_result_text16be">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="result_value" c:identifier="sqlite3_result_value">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="value" c:type="sqlite3_value*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="result_zeroblob" c:identifier="sqlite3_result_zeroblob">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="n" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+    </record>
+    <callback name="destructor_type" c:type="sqlite3_destructor_type">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </parameter>
+      </parameters>
+    </callback>
+    <function name="enable_shared_cache"
+              c:identifier="sqlite3_enable_shared_cache">
+      <return-value transfer-ownership="none">
+        <type name="int" c:type="int"/>
+      </return-value>
+      <parameters>
+        <parameter transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <record name="file" c:type="sqlite3_file">
+      <field name="pMethods" writable="1">
+        <type name="io_methods" c:type="sqlite3_io_methods*"/>
+      </field>
+    </record>
+    <function name="free" c:identifier="sqlite3_free">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="free_table" c:identifier="sqlite3_free_table">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="result" transfer-ownership="none">
+          <array c:type="char**">
+            <type name="utf8"/>
+          </array>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="global_recover" c:identifier="sqlite3_global_recover">
+      <return-value transfer-ownership="none">
+        <type name="int" c:type="int"/>
+      </return-value>
+    </function>
+    <record name="index_constraint" c:type="sqlite3_index_constraint">
+      <field name="iColumn" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="op" writable="1">
+        <type name="uint8" c:type="unsigned char"/>
+      </field>
+      <field name="usable" writable="1">
+        <type name="uint8" c:type="unsigned char"/>
+      </field>
+      <field name="iTermOffset" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+    </record>
+    <record name="index_constraint_usage"
+            c:type="sqlite3_index_constraint_usage">
+      <field name="argvIndex" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="omit" writable="1">
+        <type name="uint8" c:type="unsigned char"/>
+      </field>
+    </record>
+    <record name="index_info" c:type="sqlite3_index_info">
+      <field name="nConstraint" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="aConstraint" writable="1">
+        <type name="index_constraint" c:type="sqlite3_index_constraint*"/>
+      </field>
+      <field name="nOrderBy" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="aOrderBy" writable="1">
+        <type name="index_orderby" c:type="sqlite3_index_orderby*"/>
+      </field>
+      <field name="aConstraintUsage" writable="1">
+        <type name="index_constraint_usage"
+              c:type="sqlite3_index_constraint_usage*"/>
+      </field>
+      <field name="idxNum" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="idxStr" writable="1">
+        <type name="utf8" c:type="char*"/>
+      </field>
+      <field name="needToFreeIdxStr" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="orderByConsumed" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="estimatedCost" writable="1">
+        <type name="double" c:type="double"/>
+      </field>
+    </record>
+    <record name="index_orderby" c:type="sqlite3_index_orderby">
+      <field name="iColumn" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="desc" writable="1">
+        <type name="uint8" c:type="unsigned char"/>
+      </field>
+    </record>
+    <function name="initialize" c:identifier="sqlite3_initialize">
+      <return-value transfer-ownership="none">
+        <type name="int" c:type="int"/>
+      </return-value>
+    </function>
+    <record name="io_methods" c:type="sqlite3_io_methods">
+      <field name="iVersion" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="xClose">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xRead">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xWrite">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xTruncate">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xSync">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xFileSize">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xLock">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xUnlock">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xCheckReservedLock">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xFileControl">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xSectorSize">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xDeviceCharacteristics">
+        <type name="any" c:type="pointer"/>
+      </field>
+    </record>
+    <function name="libversion" c:identifier="sqlite3_libversion">
+      <return-value transfer-ownership="none">
+        <type name="utf8" c:type="char*"/>
+      </return-value>
+    </function>
+    <function name="libversion_number"
+              c:identifier="sqlite3_libversion_number">
+      <return-value transfer-ownership="none">
+        <type name="int" c:type="int"/>
+      </return-value>
+    </function>
+    <function name="malloc" c:identifier="sqlite3_malloc">
+      <return-value transfer-ownership="none">
+        <type name="any" c:type="void*"/>
+      </return-value>
+      <parameters>
+        <parameter transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <record name="mem_methods" c:type="sqlite3_mem_methods">
+      <field name="xMalloc">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xFree">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xRealloc">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xSize">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xRoundup">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xInit">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xShutdown">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="pAppData" writable="1">
+        <type name="any" c:type="void*"/>
+      </field>
+    </record>
+    <function name="memory_alarm" c:identifier="sqlite3_memory_alarm">
+      <return-value transfer-ownership="none">
+        <type name="int" c:type="int"/>
+      </return-value>
+      <parameters>
+        <parameter transfer-ownership="none">
+          <type name="any" c:type="any*"/>
+        </parameter>
+        <parameter transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </parameter>
+        <parameter transfer-ownership="none">
+          <type name="int64" c:type="sqlite3_int64"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="memory_highwater" c:identifier="sqlite3_memory_highwater">
+      <return-value transfer-ownership="full">
+        <type name="int64" c:type="sqlite3_int64"/>
+      </return-value>
+      <parameters>
+        <parameter name="resetFlag" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="memory_used" c:identifier="sqlite3_memory_used">
+      <return-value transfer-ownership="full">
+        <type name="int64" c:type="sqlite3_int64"/>
+      </return-value>
+    </function>
+    <record name="module" c:type="sqlite3_module">
+      <field name="iVersion" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="xCreate">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xConnect">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xBestIndex">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xDisconnect">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xDestroy">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xOpen">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xClose">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xFilter">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xNext">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xEof">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xColumn">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xRowid">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xUpdate">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xBegin">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xSync">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xCommit">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xRollback">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xFindFunction">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xRename">
+        <type name="any" c:type="pointer"/>
+      </field>
+    </record>
+    <function name="mprintf" c:identifier="sqlite3_mprintf">
+      <return-value transfer-ownership="full">
+        <type name="utf8" c:type="char*"/>
+      </return-value>
+      <parameters>
+        <parameter transfer-ownership="none">
+          <type name="utf8" c:type="char*"/>
+        </parameter>
+        <parameter transfer-ownership="none">
+          <varargs>
+          </varargs>
+        </parameter>
+      </parameters>
+    </function>
+    <record name="mutex" c:type="sqlite3_mutex">
+      <method name="free" c:identifier="sqlite3_mutex_free">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+      </method>
+      <method name="enter" c:identifier="sqlite3_mutex_enter">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+      </method>
+      <method name="try" c:identifier="sqlite3_mutex_try">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="leave" c:identifier="sqlite3_mutex_leave">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+      </method>
+      <method name="held" c:identifier="sqlite3_mutex_held">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="notheld" c:identifier="sqlite3_mutex_notheld">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+    </record>
+    <function name="mutex_alloc" c:identifier="sqlite3_mutex_alloc">
+      <return-value transfer-ownership="full">
+        <type name="mutex" c:type="sqlite3_mutex*"/>
+      </return-value>
+      <parameters>
+        <parameter transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <record name="mutex_methods" c:type="sqlite3_mutex_methods">
+      <field name="xMutexInit">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xMutexEnd">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xMutexAlloc">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xMutexFree">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xMutexEnter">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xMutexTry">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xMutexLeave">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xMutexHeld">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xMutexNotheld">
+        <type name="any" c:type="pointer"/>
+      </field>
+    </record>
+    <function name="open" c:identifier="sqlite3_open">
+      <return-value transfer-ownership="none">
+        <type name="int" c:type="int"/>
+      </return-value>
+      <parameters>
+        <parameter name="filename" transfer-ownership="none">
+          <type name="utf8" c:type="char*"/>
+        </parameter>
+        <parameter name="ppDb" transfer-ownership="none">
+          <type name="sqlite3" c:type="sqlite3**"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="open16" c:identifier="sqlite3_open16">
+      <return-value transfer-ownership="none">
+        <type name="int" c:type="int"/>
+      </return-value>
+      <parameters>
+        <parameter name="filename" transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </parameter>
+        <parameter name="ppDb" transfer-ownership="none">
+          <type name="sqlite3" c:type="sqlite3**"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="open_v2" c:identifier="sqlite3_open_v2">
+      <return-value transfer-ownership="none">
+        <type name="int" c:type="int"/>
+      </return-value>
+      <parameters>
+        <parameter name="filename" transfer-ownership="none">
+          <type name="utf8" c:type="char*"/>
+        </parameter>
+        <parameter name="ppDb" transfer-ownership="none">
+          <type name="sqlite3" c:type="sqlite3**"/>
+        </parameter>
+        <parameter name="flags" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+        <parameter name="zVfs" transfer-ownership="none">
+          <type name="utf8" c:type="char*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="os_end" c:identifier="sqlite3_os_end">
+      <return-value transfer-ownership="none">
+        <type name="int" c:type="int"/>
+      </return-value>
+    </function>
+    <function name="os_init" c:identifier="sqlite3_os_init">
+      <return-value transfer-ownership="none">
+        <type name="int" c:type="int"/>
+      </return-value>
+    </function>
+    <record name="pcache" c:type="sqlite3_pcache">
+    </record>
+    <record name="pcache_methods" c:type="sqlite3_pcache_methods">
+      <field name="pArg" writable="1">
+        <type name="any" c:type="void*"/>
+      </field>
+      <field name="xInit">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xShutdown">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xCreate">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xCachesize">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xPagecount">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xFetch">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xUnpin">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xRekey">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xTruncate">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xDestroy">
+        <type name="any" c:type="pointer"/>
+      </field>
+    </record>
+    <function name="randomness" c:identifier="sqlite3_randomness">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="N" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+        <parameter name="P" transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="realloc" c:identifier="sqlite3_realloc">
+      <return-value transfer-ownership="none">
+        <type name="any" c:type="void*"/>
+      </return-value>
+      <parameters>
+        <parameter transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </parameter>
+        <parameter transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="release_memory" c:identifier="sqlite3_release_memory">
+      <return-value transfer-ownership="none">
+        <type name="int" c:type="int"/>
+      </return-value>
+      <parameters>
+        <parameter transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="reset_auto_extension"
+              c:identifier="sqlite3_reset_auto_extension">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+    </function>
+    <function name="shutdown" c:identifier="sqlite3_shutdown">
+      <return-value transfer-ownership="none">
+        <type name="int" c:type="int"/>
+      </return-value>
+    </function>
+    <function name="sleep" c:identifier="sqlite3_sleep">
+      <return-value transfer-ownership="none">
+        <type name="int" c:type="int"/>
+      </return-value>
+      <parameters>
+        <parameter transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="snprintf" c:identifier="sqlite3_snprintf">
+      <return-value transfer-ownership="full">
+        <type name="utf8" c:type="char*"/>
+      </return-value>
+      <parameters>
+        <parameter transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+        <parameter transfer-ownership="full">
+          <type name="utf8" c:type="char*"/>
+        </parameter>
+        <parameter transfer-ownership="none">
+          <type name="utf8" c:type="char*"/>
+        </parameter>
+        <parameter transfer-ownership="none">
+          <varargs>
+          </varargs>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="soft_heap_limit" c:identifier="sqlite3_soft_heap_limit">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <record name="sqlite3" c:type="sqlite3">
+      <method name="close" c:identifier="sqlite3_close">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="exec" c:identifier="sqlite3_exec">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="sql" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="callback" transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter name="errmsg" transfer-ownership="none">
+            <array c:type="char**">
+              <type name="utf8"/>
+            </array>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="db_config" c:identifier="sqlite3_db_config">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="op" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <varargs>
+            </varargs>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="extended_result_codes"
+              c:identifier="sqlite3_extended_result_codes">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="onoff" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="last_insert_rowid"
+              c:identifier="sqlite3_last_insert_rowid">
+        <return-value transfer-ownership="full">
+          <type name="int64" c:type="sqlite3_int64"/>
+        </return-value>
+      </method>
+      <method name="changes" c:identifier="sqlite3_changes">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="total_changes" c:identifier="sqlite3_total_changes">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="interrupt" c:identifier="sqlite3_interrupt">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+      </method>
+      <method name="busy_handler" c:identifier="sqlite3_busy_handler">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="busy_timeout" c:identifier="sqlite3_busy_timeout">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="ms" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="get_table" c:identifier="sqlite3_get_table">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="zSql" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="pazResult" transfer-ownership="none">
+            <type name="utf8" c:type="char***"/>
+          </parameter>
+          <parameter name="pnRow" direction="out" transfer-ownership="full">
+            <type name="int" c:type="int*"/>
+          </parameter>
+          <parameter name="pnColumn" direction="out" transfer-ownership="full">
+            <type name="int" c:type="int*"/>
+          </parameter>
+          <parameter name="pzErrmsg" transfer-ownership="none">
+            <array c:type="char**">
+              <type name="utf8"/>
+            </array>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="set_authorizer" c:identifier="sqlite3_set_authorizer">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="xAuth" transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+          <parameter name="pUserData" transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="trace" c:identifier="sqlite3_trace">
+        <return-value transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </return-value>
+        <parameters>
+          <parameter name="xTrace" transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="profile" c:identifier="sqlite3_profile">
+        <return-value transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </return-value>
+        <parameters>
+          <parameter name="xProfile" transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="progress_handler" c:identifier="sqlite3_progress_handler">
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="errcode" c:identifier="sqlite3_errcode">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="extended_errcode" c:identifier="sqlite3_extended_errcode">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="errmsg" c:identifier="sqlite3_errmsg">
+        <return-value transfer-ownership="none">
+          <type name="utf8" c:type="char*"/>
+        </return-value>
+      </method>
+      <method name="errmsg16" c:identifier="sqlite3_errmsg16">
+        <return-value transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </return-value>
+      </method>
+      <method name="limit" c:identifier="sqlite3_limit">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="id" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter name="newVal" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="prepare" c:identifier="sqlite3_prepare">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="zSql" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="nByte" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter name="ppStmt" transfer-ownership="none">
+            <type name="stmt" c:type="sqlite3_stmt**"/>
+          </parameter>
+          <parameter name="pzTail" transfer-ownership="none">
+            <array c:type="char**">
+              <type name="utf8"/>
+            </array>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="prepare_v2" c:identifier="sqlite3_prepare_v2">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="zSql" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="nByte" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter name="ppStmt" transfer-ownership="none">
+            <type name="stmt" c:type="sqlite3_stmt**"/>
+          </parameter>
+          <parameter name="pzTail" transfer-ownership="none">
+            <array c:type="char**">
+              <type name="utf8"/>
+            </array>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="prepare16" c:identifier="sqlite3_prepare16">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="zSql" transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter name="nByte" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter name="ppStmt" transfer-ownership="none">
+            <type name="stmt" c:type="sqlite3_stmt**"/>
+          </parameter>
+          <parameter name="pzTail" transfer-ownership="none">
+            <type name="any" c:type="void**"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="prepare16_v2" c:identifier="sqlite3_prepare16_v2">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="zSql" transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter name="nByte" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter name="ppStmt" transfer-ownership="none">
+            <type name="stmt" c:type="sqlite3_stmt**"/>
+          </parameter>
+          <parameter name="pzTail" transfer-ownership="none">
+            <type name="any" c:type="void**"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="create_function" c:identifier="sqlite3_create_function">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="zFunctionName" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="nArg" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter name="eTextRep" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter name="pApp" transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter name="xFunc" transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+          <parameter name="xStep" transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+          <parameter name="xFinal" transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="create_function16"
+              c:identifier="sqlite3_create_function16">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="zFunctionName" transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter name="nArg" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter name="eTextRep" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter name="pApp" transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter name="xFunc" transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+          <parameter name="xStep" transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+          <parameter name="xFinal" transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="create_collation" c:identifier="sqlite3_create_collation">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="zName" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="eTextRep" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter name="xCompare" transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="create_collation_v2"
+              c:identifier="sqlite3_create_collation_v2">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="zName" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="eTextRep" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter name="xCompare" transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+          <parameter name="xDestroy" transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="create_collation16"
+              c:identifier="sqlite3_create_collation16">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="zName" transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter name="eTextRep" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter name="xCompare" transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="collation_needed" c:identifier="sqlite3_collation_needed">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="collation_needed16"
+              c:identifier="sqlite3_collation_needed16">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="key" c:identifier="sqlite3_key">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="pKey" transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter name="nKey" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="rekey" c:identifier="sqlite3_rekey">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="pKey" transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter name="nKey" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="get_autocommit" c:identifier="sqlite3_get_autocommit">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="next_stmt" c:identifier="sqlite3_next_stmt">
+        <return-value transfer-ownership="full">
+          <type name="stmt" c:type="sqlite3_stmt*"/>
+        </return-value>
+        <parameters>
+          <parameter name="pStmt" transfer-ownership="none">
+            <type name="stmt" c:type="sqlite3_stmt*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="commit_hook" c:identifier="sqlite3_commit_hook">
+        <return-value transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="rollback_hook" c:identifier="sqlite3_rollback_hook">
+        <return-value transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="update_hook" c:identifier="sqlite3_update_hook">
+        <return-value transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="table_column_metadata"
+              c:identifier="sqlite3_table_column_metadata">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="zDbName" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="zTableName" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="zColumnName" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="pzDataType" transfer-ownership="none">
+            <type name="char any" c:type="char any**"/>
+          </parameter>
+          <parameter name="pzCollSeq" transfer-ownership="none">
+            <type name="char any" c:type="char any**"/>
+          </parameter>
+          <parameter name="pNotNull" direction="out" transfer-ownership="full">
+            <type name="int" c:type="int*"/>
+          </parameter>
+          <parameter name="pPrimaryKey"
+                     direction="out"
+                     transfer-ownership="full">
+            <type name="int" c:type="int*"/>
+          </parameter>
+          <parameter name="pAutoinc" direction="out" transfer-ownership="full">
+            <type name="int" c:type="int*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="load_extension" c:identifier="sqlite3_load_extension">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="zFile" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="zProc" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="pzErrMsg" transfer-ownership="none">
+            <array c:type="char**">
+              <type name="utf8"/>
+            </array>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="enable_load_extension"
+              c:identifier="sqlite3_enable_load_extension">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="onoff" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="create_module" c:identifier="sqlite3_create_module">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="zName" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="p" transfer-ownership="none">
+            <type name="module" c:type="sqlite3_module*"/>
+          </parameter>
+          <parameter name="pClientData" transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="create_module_v2" c:identifier="sqlite3_create_module_v2">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="zName" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="p" transfer-ownership="none">
+            <type name="module" c:type="sqlite3_module*"/>
+          </parameter>
+          <parameter name="pClientData" transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter name="xDestroy" transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="declare_vtab" c:identifier="sqlite3_declare_vtab">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="zSQL" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="overload_function"
+              c:identifier="sqlite3_overload_function">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="zFuncName" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="nArg" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="blob_open" c:identifier="sqlite3_blob_open">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="zDb" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="zTable" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="zColumn" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="iRow" transfer-ownership="none">
+            <type name="int64" c:type="sqlite3_int64"/>
+          </parameter>
+          <parameter name="flags" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter name="ppBlob" transfer-ownership="none">
+            <type name="blob" c:type="sqlite3_blob**"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="db_mutex" c:identifier="sqlite3_db_mutex">
+        <return-value transfer-ownership="full">
+          <type name="mutex" c:type="sqlite3_mutex*"/>
+        </return-value>
+      </method>
+      <method name="file_control" c:identifier="sqlite3_file_control">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="zDbName" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="op" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="db_status" c:identifier="sqlite3_db_status">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="op" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter name="pCur" direction="out" transfer-ownership="full">
+            <type name="int" c:type="int*"/>
+          </parameter>
+          <parameter name="pHiwtr" direction="out" transfer-ownership="full">
+            <type name="int" c:type="int*"/>
+          </parameter>
+          <parameter name="resetFlg" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="backup_init" c:identifier="sqlite3_backup_init">
+        <return-value transfer-ownership="full">
+          <type name="backup" c:type="sqlite3_backup*"/>
+        </return-value>
+        <parameters>
+          <parameter name="zDestName" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="pSource" transfer-ownership="none">
+            <type name="sqlite3" c:type="sqlite3*"/>
+          </parameter>
+          <parameter name="zSourceName" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="unlock_notify" c:identifier="sqlite3_unlock_notify">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="xNotify" transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+          <parameter name="pNotifyArg" transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+        </parameters>
+      </method>
+    </record>
+    <function name="status" c:identifier="sqlite3_status">
+      <return-value transfer-ownership="none">
+        <type name="int" c:type="int"/>
+      </return-value>
+      <parameters>
+        <parameter name="op" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+        <parameter name="pCurrent" direction="out" transfer-ownership="full">
+          <type name="int" c:type="int*"/>
+        </parameter>
+        <parameter name="pHighwater" direction="out" transfer-ownership="full">
+          <type name="int" c:type="int*"/>
+        </parameter>
+        <parameter name="resetFlag" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <record name="stmt" c:type="sqlite3_stmt">
+      <method name="status" c:identifier="sqlite3_stmt_status">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="op" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter name="resetFlg" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="sql" c:identifier="sqlite3_sql">
+        <return-value transfer-ownership="none">
+          <type name="utf8" c:type="char*"/>
+        </return-value>
+      </method>
+      <method name="bind_blob" c:identifier="sqlite3_bind_blob">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter name="n" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="bind_double" c:identifier="sqlite3_bind_double">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="double" c:type="double"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="bind_int" c:identifier="sqlite3_bind_int">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="bind_int64" c:identifier="sqlite3_bind_int64">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="int64" c:type="sqlite3_int64"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="bind_null" c:identifier="sqlite3_bind_null">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="bind_text" c:identifier="sqlite3_bind_text">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+          <parameter name="n" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="bind_text16" c:identifier="sqlite3_bind_text16">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="void*"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="any" c:type="any*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="bind_value" c:identifier="sqlite3_bind_value">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter transfer-ownership="none">
+            <type name="value" c:type="sqlite3_value*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="bind_zeroblob" c:identifier="sqlite3_bind_zeroblob">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+          <parameter name="n" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="bind_parameter_count"
+              c:identifier="sqlite3_bind_parameter_count">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="bind_parameter_name"
+              c:identifier="sqlite3_bind_parameter_name">
+        <return-value transfer-ownership="none">
+          <type name="utf8" c:type="char*"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="bind_parameter_index"
+              c:identifier="sqlite3_bind_parameter_index">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="zName" transfer-ownership="none">
+            <type name="utf8" c:type="char*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="clear_bindings" c:identifier="sqlite3_clear_bindings">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="column_count" c:identifier="sqlite3_column_count">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="column_name" c:identifier="sqlite3_column_name">
+        <return-value transfer-ownership="none">
+          <type name="utf8" c:type="char*"/>
+        </return-value>
+        <parameters>
+          <parameter name="N" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="column_name16" c:identifier="sqlite3_column_name16">
+        <return-value transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </return-value>
+        <parameters>
+          <parameter name="N" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="column_database_name"
+              c:identifier="sqlite3_column_database_name">
+        <return-value transfer-ownership="none">
+          <type name="utf8" c:type="char*"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="column_database_name16"
+              c:identifier="sqlite3_column_database_name16">
+        <return-value transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="column_table_name"
+              c:identifier="sqlite3_column_table_name">
+        <return-value transfer-ownership="none">
+          <type name="utf8" c:type="char*"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="column_table_name16"
+              c:identifier="sqlite3_column_table_name16">
+        <return-value transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="column_origin_name"
+              c:identifier="sqlite3_column_origin_name">
+        <return-value transfer-ownership="none">
+          <type name="utf8" c:type="char*"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="column_origin_name16"
+              c:identifier="sqlite3_column_origin_name16">
+        <return-value transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="column_decltype" c:identifier="sqlite3_column_decltype">
+        <return-value transfer-ownership="none">
+          <type name="utf8" c:type="char*"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="column_decltype16"
+              c:identifier="sqlite3_column_decltype16">
+        <return-value transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="step" c:identifier="sqlite3_step">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="data_count" c:identifier="sqlite3_data_count">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="column_blob" c:identifier="sqlite3_column_blob">
+        <return-value transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </return-value>
+        <parameters>
+          <parameter name="iCol" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="column_bytes" c:identifier="sqlite3_column_bytes">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="iCol" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="column_bytes16" c:identifier="sqlite3_column_bytes16">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="iCol" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="column_double" c:identifier="sqlite3_column_double">
+        <return-value transfer-ownership="none">
+          <type name="double" c:type="double"/>
+        </return-value>
+        <parameters>
+          <parameter name="iCol" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="column_int" c:identifier="sqlite3_column_int">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="iCol" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="column_int64" c:identifier="sqlite3_column_int64">
+        <return-value transfer-ownership="full">
+          <type name="int64" c:type="sqlite3_int64"/>
+        </return-value>
+        <parameters>
+          <parameter name="iCol" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="column_text" c:identifier="sqlite3_column_text">
+        <return-value transfer-ownership="none">
+          <array c:type="unsigned char*">
+            <type name="uint8"/>
+          </array>
+        </return-value>
+        <parameters>
+          <parameter name="iCol" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="column_text16" c:identifier="sqlite3_column_text16">
+        <return-value transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </return-value>
+        <parameters>
+          <parameter name="iCol" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="column_type" c:identifier="sqlite3_column_type">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="iCol" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="column_value" c:identifier="sqlite3_column_value">
+        <return-value transfer-ownership="full">
+          <type name="value" c:type="sqlite3_value*"/>
+        </return-value>
+        <parameters>
+          <parameter name="iCol" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="finalize" c:identifier="sqlite3_finalize">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="reset" c:identifier="sqlite3_reset">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="expired" c:identifier="sqlite3_expired">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="transfer_bindings"
+              c:identifier="sqlite3_transfer_bindings">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter transfer-ownership="none">
+            <type name="stmt" c:type="sqlite3_stmt*"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="db_handle" c:identifier="sqlite3_db_handle">
+        <return-value transfer-ownership="full">
+          <type name="sqlite3" c:type="sqlite3*"/>
+        </return-value>
+      </method>
+    </record>
+    <function name="test_control" c:identifier="sqlite3_test_control">
+      <return-value transfer-ownership="none">
+        <type name="int" c:type="int"/>
+      </return-value>
+      <parameters>
+        <parameter name="op" transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </parameter>
+        <parameter transfer-ownership="none">
+          <varargs>
+          </varargs>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="thread_cleanup" c:identifier="sqlite3_thread_cleanup">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+    </function>
+    <function name="threadsafe" c:identifier="sqlite3_threadsafe">
+      <return-value transfer-ownership="none">
+        <type name="int" c:type="int"/>
+      </return-value>
+    </function>
+    <record name="value" c:type="sqlite3_value">
+      <method name="blob" c:identifier="sqlite3_value_blob">
+        <return-value transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </return-value>
+      </method>
+      <method name="bytes" c:identifier="sqlite3_value_bytes">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="bytes16" c:identifier="sqlite3_value_bytes16">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="double" c:identifier="sqlite3_value_double">
+        <return-value transfer-ownership="none">
+          <type name="double" c:type="double"/>
+        </return-value>
+      </method>
+      <method name="int" c:identifier="sqlite3_value_int">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="int64" c:identifier="sqlite3_value_int64">
+        <return-value transfer-ownership="full">
+          <type name="int64" c:type="sqlite3_int64"/>
+        </return-value>
+      </method>
+      <method name="text" c:identifier="sqlite3_value_text">
+        <return-value transfer-ownership="none">
+          <array c:type="unsigned char*">
+            <type name="uint8"/>
+          </array>
+        </return-value>
+      </method>
+      <method name="text16" c:identifier="sqlite3_value_text16">
+        <return-value transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </return-value>
+      </method>
+      <method name="text16le" c:identifier="sqlite3_value_text16le">
+        <return-value transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </return-value>
+      </method>
+      <method name="text16be" c:identifier="sqlite3_value_text16be">
+        <return-value transfer-ownership="none">
+          <type name="any" c:type="void*"/>
+        </return-value>
+      </method>
+      <method name="type" c:identifier="sqlite3_value_type">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+      <method name="numeric_type" c:identifier="sqlite3_value_numeric_type">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+    </record>
+    <record name="vfs" c:type="sqlite3_vfs">
+      <field name="iVersion" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="szOsFile" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="mxPathname" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="pNext" writable="1">
+        <type name="vfs" c:type="sqlite3_vfs*"/>
+      </field>
+      <field name="zName" writable="1">
+        <type name="utf8" c:type="char*"/>
+      </field>
+      <field name="pAppData" writable="1">
+        <type name="any" c:type="void*"/>
+      </field>
+      <field name="xOpen">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xDelete">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xAccess">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xFullPathname">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xDlOpen">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xDlError">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xDlSym">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xDlClose">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xRandomness">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xSleep">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xCurrentTime">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <field name="xGetLastError">
+        <type name="any" c:type="pointer"/>
+      </field>
+      <method name="register" c:identifier="sqlite3_vfs_register">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="makeDflt" transfer-ownership="none">
+            <type name="int" c:type="int"/>
+          </parameter>
+        </parameters>
+      </method>
+      <method name="unregister" c:identifier="sqlite3_vfs_unregister">
+        <return-value transfer-ownership="none">
+          <type name="int" c:type="int"/>
+        </return-value>
+      </method>
+    </record>
+    <function name="vfs_find" c:identifier="sqlite3_vfs_find">
+      <return-value transfer-ownership="full">
+        <type name="vfs" c:type="sqlite3_vfs*"/>
+      </return-value>
+      <parameters>
+        <parameter name="zVfsName" transfer-ownership="none">
+          <type name="utf8" c:type="char*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <record name="vtab" c:type="sqlite3_vtab">
+      <field name="pModule" writable="1">
+        <type name="module" c:type="sqlite3_module*"/>
+      </field>
+      <field name="nRef" writable="1">
+        <type name="int" c:type="int"/>
+      </field>
+      <field name="zErrMsg" writable="1">
+        <type name="utf8" c:type="char*"/>
+      </field>
+    </record>
+    <record name="vtab_cursor" c:type="sqlite3_vtab_cursor">
+      <field name="pVtab" writable="1">
+        <type name="vtab" c:type="sqlite3_vtab*"/>
+      </field>
+    </record>
+  </namespace>
+</repository>
