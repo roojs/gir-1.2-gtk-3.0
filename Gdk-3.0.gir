@@ -185,7 +185,7 @@ prevention'.</doc>
         <type name="Display"/>
       </property>
     </class>
-    <record name="Atom" c:type="GdkAtom" disguised="1">
+    <record name="Atom" c:type="GdkAtom">
       <doc xml:whitespace="preserve">An opaque type representing a string as an index into a table
 of strings on the X server.</doc>
     </record>
