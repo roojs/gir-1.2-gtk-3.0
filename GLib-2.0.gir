@@ -2859,7 +2859,7 @@ cannot be accessed directly.</doc>
           <parameter name="count" transfer-ownership="none">
             <type name="gssize" c:type="gssize"/>
           </parameter>
-          <parameter name="bytes_written" transfer-ownership="none">
+          <parameter name="bytes_written" transfer-ownership="none"  direction="out">
             <type name="gsize" c:type="gsize*"/>
           </parameter>
         </parameters>
