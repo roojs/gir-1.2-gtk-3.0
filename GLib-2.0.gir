@@ -17,7 +17,7 @@ and/or use gtk-doc annotations.  -->
       <doc xml:whitespace="preserve">Integer representing a day of the month; between 1 and
 31. #G_DATE_BAD_DAY represents an invalid day of the month.</doc>
       <type name="guint8" c:type="guint8"/>
-    </alias>
+    </alias>
     <alias name="DateYear" c:type="GDateYear">
       <doc xml:whitespace="preserve">Integer representing a year; #G_DATE_BAD_YEAR is the invalid
 value. The year must be 1 or higher; negative (BC) years are not
@@ -7433,15 +7433,15 @@ is %G_IO_STATUS_NORMAL.</doc>
           <type name="IOStatus" c:type="GIOStatus"/>
         </return-value>
         <parameters>
-          <parameter name="str_return" transfer-ownership="none">
+          <parameter name="str_return" transfer-ownership="none" direction="out">
             <doc xml:whitespace="preserve">The line read from the #GIOChannel, including the line terminator. This data should be freed with g_free() when no longer needed. This is a nul-terminated string. If a @length of zero is returned, this will be %NULL instead.</doc>
             <type name="utf8" c:type="gchar**"/>
           </parameter>
-          <parameter name="length" transfer-ownership="none">
+          <parameter name="length" transfer-ownership="none" direction="out">
             <doc xml:whitespace="preserve">location to store length of the read data, or %NULL</doc>
             <type name="gsize" c:type="gsize*"/>
           </parameter>
-          <parameter name="terminator_pos" transfer-ownership="none">
+          <parameter name="terminator_pos" transfer-ownership="none" direction="out">
             <doc xml:whitespace="preserve">location to store position of line terminator, or %NULL</doc>
             <type name="gsize" c:type="gsize*"/>
           </parameter>
@@ -7456,7 +7456,7 @@ is %G_IO_STATUS_NORMAL.</doc>
           <type name="IOStatus" c:type="GIOStatus"/>
         </return-value>
         <parameters>
-          <parameter name="buffer" transfer-ownership="none">
+          <parameter name="buffer" transfer-ownership="none" direction="out">
             <doc xml:whitespace="preserve">a #GString into which the line will be written. If @buffer already contains data, the old data will be overwritten.</doc>
             <type name="String" c:type="GString*"/>
           </parameter>
@@ -28625,9 +28625,9 @@ codes are those in the #GFileError enumeration. In the error case,
                    caller-allocates="0"
                    transfer-ownership="full">
           <doc xml:whitespace="preserve">location to store an allocated string, use g_free() to free the returned string</doc>
-          <array length="2" zero-terminated="0" c:type="gchar**">
-            <type name="guint8"/>
-          </array>
+          
+          <type name="utf8" c:type="gchar**"/>
+          
         </parameter>
         <parameter name="length"
                    direction="out"
